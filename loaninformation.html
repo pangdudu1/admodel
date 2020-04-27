@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>借款信息 一次性借款</title>
+    <script src="./wap/js/jquery.min.js"></script>
+    <script src="./wap/js/rem.js"></script>
+    <link rel="stylesheet" href="./wap/css/init.css">
+    <link rel="stylesheet" href="./wap/css/index.css">
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #F5F6FA
+                /* background: linear-gradient(35deg, #82EEC8, #7258FF); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loan_wrap">
+        <div class="loan_header">
+            <div class="loan_head_one">
+                <div class="loan_hl left"><img src="./wap/img/left2.png" alt=""></div>
+                <div class="loan_htxt left"><span>Informasi pinjaman</span></div>
+            </div>
+            <div class="loan_head_two">
+                <ul class="loan_tab">
+                    <li tabid="1" class="loanactive">Sekali bayar</li>
+                    <li tabid="2">Ciclian</li>
+                </ul>
+            </div>
+        </div>
+        <div class="height"></div>
+        <div class="loan_bottom">
+            <div id="box">
+                <!-- 一次性借款里面的内容 -->
+                <div class="tab-item">
+                    <div class="item_one">
+                        <p class="sm_title padd">Jumlah Pinjaman</p>
+                        <div class="item_rp padd"><span>Rp</span><span class="slider-num">1.400.000</span></div>
+                        <div class="item_num padd">
+                            <span class="left">Rp0.00</span><span class="right">Rp3000.00</span>
+                        </div>
+                        <div class="slider-panel">
+                            <div class="slider-box">
+                                <p class="slider-value" id="slider-value"></p>
+                                <input type="range" min="0" step="1" max="3000" value="0" id="slider">
+                            </div>
+                            <!-- <p><span class='slider-percentage'>0</span>%</p> -->
+                        </div>
+                        <p class="sm_title padd">Meminjam tenggat wak</p>
+                        <div class="item_radio">
+                            <ul class="item_check">
+                                <li>
+                                    <!-- 给input加事件的时候 不要操作class -->
+                                    <input type="radio" name="dietaryPres" id="dietaryPres1" value="1" class="checkbox">
+                                    <label class="checkbox" for="dietaryPres1">7 hari</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="dietaryPres" id="dietaryPres" value="1" class="checkbox">
+                                    <label class="checkbox" for="dietaryPres">7 hari</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="dietaryPres" id="dietaryPres2" value="1" class="checkbox">
+                                    <label class="checkbox" for="dietaryPres2">14 hari</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="dietaryPres" id="dietaryPres3" value="1" class="checkbox">
+                                    <label class="checkbox" for="dietaryPres3">14 hari</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="item_one">
+                        <ul class="biayalist">
+                            <li>
+                                <span>Biaya tambanhan</span>
+                                <span>Rp13.00</span>
+                            </li>
+                            <li>
+                                <span>Suku bunga</span>
+                                <span>Rp25.00</span>
+                            </li>
+                            <li>
+                                <span>Sebenarnya akan dikirim</span>
+                                <span>Rp1.400.000</span>
+                            </li>
+                            <li>
+                                <span>Biaya tambanhan</span>
+                                <span>Rp1322.00</span>
+                            </li>
+                            <li>
+                                <span>Waktu pembayaran</span>
+                                <span>Rp1322.00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="agreement">
+                        <input type="checkbox" id="agreement" class="input">
+                        <label for="agreement">
+                            Sudah dibaca
+                        </label>
+
+                        <a href="">《xxx》</a>
+
+
+
+                    </div>
+                    <button class="segera">Segera rentenir</button>
+                </div>
+                <!-- 一次性借款里面的内容结束 -->
+                <!-- 分期内容 -->
+                <div class="tab-item">
+                    <div class="item_one">
+                        <p class="sm_title padd">Jumlah Pinjaman</p>
+                        <div class="item_rp padd"><span>Rp</span><span class="slider-num1">1.400.000</span></div>
+                        <div class="item_num padd">
+                            <span class="left">Rp0.00</span><span class="right">Rp3000.00</span>
+                        </div>
+                        <div class="slider-panel1">
+                            <div class="slider-box1">
+                                <p class="slider-value1" ></p>
+                                <input type="range" min="0" step="1" max="50" value="0" id="slider1">
+                            </div>
+                        </div>
+                        <p class="sm_title padd">Meminjam tenggat wak</p>
+                        <div class="item_radio">
+                            <ul class="item_check">
+                                <li>
+                                    <!-- 给input加事件的时候 不要操作class -->
+                                    <input type="radio" name="dietaryPres1" id="dietaryPres_1" value="1"
+                                        class="checkbox">
+                                    <label class="checkbox" for="dietaryPres_1">7 hari</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="dietaryPres1" id="dietaryPres_2" value="1"
+                                        class="checkbox">
+                                    <label class="checkbox" for="dietaryPres_2">7 hari</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="dietaryPres1" id="dietaryPres_3" value="1"
+                                        class="checkbox">
+                                    <label class="checkbox" for="dietaryPres_3">14 hari</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="dietaryPres1" id="dietaryPres_4" value="1"
+                                        class="checkbox">
+                                    <label class="checkbox" for="dietaryPres_4">11 hari</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item_one">
+                        <p class="sm_title pembay">Pembayaran dengan detail</p>
+                        <div class="vertical">
+                            <div class="vertical-text">
+                                <p class="vertione">1 periode</p>
+                                <p class="vertitwo">2019/12/28</p>
+                            </div>
+                            <div class="vertical-circle"></div>
+                            <div class="vertical-text1">
+                                <p class="vertithree">Rp200.00</p>
+                                <p class="vertithfore">Pokok 100.00 + Suku bung 50.00
+                                    + Biaya tambahan 50.00</p>
+                            </div>
+                            <div class="vertical-line"></div>
+
+                            <div class="vertical-text">
+                                <p class="vertione">2 periode</p>
+                                <p class="vertitwo">2019/12/28</p>
+                            </div>
+                            <div class="vertical-circle1"></div>
+                            <div class="vertical-text1">
+                                <p class="vertithree">Rp200.00</p>
+                                <p class="vertithfore">Pokok 100.00 + Suku bung 50.00
+                                    + Biaya tambahan 50.00</p>
+                            </div>
+                            <div class="vertical-line"></div>
+
+                            <div class="vertical-text">
+                                <p class="vertione">3 periode</p>
+                                <p class="vertitwo">2019/12/28</p>
+                            </div>
+                            <div class="vertical-circle2"></div>
+                            <div class="vertical-text1">
+                                <p class="vertithree">Rp200.00</p>
+                                <p class="vertithfore">Pokok 100.00 + Suku bung 50.00
+                                    + Biaya tambahan 50.00</p>
+                            </div>
+                            <div class="vertical-line"></div>
+                        </div>
+
+                    </div>
+                    <div class="agreement">
+                        <input type="checkbox" name="agreement" id="agreement">
+                        <label for="agreement" >
+                            Sudah dibaca
+                        </label>
+                        <a href="">《xxx》</a>
+                    </div>
+                    <button class="segera">Segera rentenir</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            // tab 
+            $(".tab-item").eq(0).show();
+            $(".loan_tab li").on("click", function () {
+                var num = $(".loan_tab li").index(this);
+                $(".tab-item").hide();
+                $(".tab-item").eq(num).show();
+                $(this).attr("class", "loanactive");
+                $(this).siblings().removeClass("loanactive");
+            });
+            //input
+            $('#dietaryPres1').prop("checked", true);
+            $('#dietaryPres_1').prop("checked", true);
+            // console.log($('.checkbox').prop('checked'))
+
+            //滑动条
+            var num =  $('#slider').attr('max');
+            $('#slider').on('mousemove touchmove touchend click', moveSlider)
+            function moveSlider() {
+                let sliderValue = parseInt($(this).val());
+                console.log(sliderValue/num)
+                $('#slider-value').css('width', sliderValue/num*100 + '%');
+                $('.slider-num').text(sliderValue);
+            }
+
+
+            var num1 =  $('#slider1').attr('max');
+
+            $('#slider1').on('mousemove touchmove touchend click', moveSlider1)
+            function moveSlider1() {
+                let sliderValue1 = parseInt($(this).val());
+                $('.slider-value1').css('width', sliderValue1/num1*100 + '%');
+                // console.log(sliderValue)
+                $('.slider-num1').text(sliderValue1);
+            }
+            //颜色随机
+            // function rand(number) {
+            //     return Math.floor(Math.random() * number);
+            // };
+
+            // $(function () {
+            //     var arr = ['#FF6073', '#54C8A3', '#7C69EF'];
+            //     var arrLength = arr.length;
+            //     $('.vertical-circle').css('backgroundColor', arr[rand(arrLength)]);  //取值0~6
+            // })
+
+        });
+
+    </script>
+
+</body>
+
+</html>

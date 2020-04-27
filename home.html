@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <script src="./wap/js/jquery.min.js"></script>
+    <script src="./wap/js/rem.js"></script>
+    <link rel="stylesheet" href="./wap/css/init.css">
+    <link rel="stylesheet" href="./wap/css/index.css">
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            background:#7258FF;
+            background: linear-gradient(35deg, #82EEC8, #7258FF);
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-box">
+        <div class="alert">
+            <!-- 放款失败 -->
+            <div class="alert_wrap" style="text-align: center;display: none">
+                <div class="alert_succ">
+                    <img src="./wap/img/error.png" alt="">
+                </div>
+                <p class="alert_succtxt">放款失败</p>
+                <p class="textone">您申请的借款放款失败！ </p>
+                <p class="textone">失败原因：银行卡信息与实名认证人不符</p> 
+                   
+                <button class="wancheng">更换银行卡</button>
+            </div>
+            <!-- 还款成功 -->
+            <div class="alert_wrap" style="display: none;">
+                <div class="alert_succ">
+                    <img src="./wap/img/success.png" alt="">
+                </div>
+                <p class="alert_succtxt">借款成功</p>
+                <p class="textone">恭喜您 您于2018.06.05 18:00申请的借款通过审核啦，借款资金会在24小时内汇入您的账户，请密切关注您银行账号余额变动。</p>
+                <button class="wancheng">完成</button>
+            </div>
+            <!-- 还款提醒 -->
+            <div class="alert_wrap"  style="display: none;" >
+                <p class="alert_succtxt">还款提醒</p>
+                <p style="margin-bottom: 0.54rem;"><span class="textone">UKT9010800002</span><span class="alerttxt">待还款</span></p>
+                <div class="alert_num"> 
+                    <span>1.400.000</span>
+                    <span>7</span>
+                </div>
+                <div class="amount" style="margin-bottom: 0.5rem;">
+                    <span>借款金额(Rp）</span>
+                    <span>借款期限(hari）</span>
+                </div> 
+                <div class="amount">
+                    <span>借款日期</span>
+                    <span> 2018-02-24</span>
+                </div> 
+                <div class="amount">
+                    <span>应还款日期 </span>
+                    <span> 2018-03-01</span>
+                </div> 
+                <p class="textone">按时还款有利于提升您的信用！</p>
+                <button class="wancheng2">关闭</button>
+                <button class="wancheng3">立即还款</button>
+            </div>
+            <!-- 逾期提醒 -->
+            <div class="alert_wrap" style="display: none;">
+                <p class="alert_succtxt">逾期提醒</p>
+                <p style="margin-bottom: 0.54rem;"><span class="textone">UKT9010800002</span><span class="alerttxt1">已逾期</span></p>
+                <div class="alert_num"> 
+                    <span>1.400.000</span>
+                    <span>7</span>
+                </div>
+                <div class="amount" style="margin-bottom: 0.5rem;">
+                    <span>借款金额(Rp）</span>
+                    <span>借款期限(hari）</span>
+                </div> 
+                <div class="amount">
+                    <span>借款日期</span>
+                    <span> 2018-02-24</span>
+                </div> 
+                <div class="amount">
+                    <span>应还款日期 </span>
+                    <span> 2018-03-01</span>
+                </div> 
+                <div class="amount">
+                    <span>逾期天数 </span>
+                    <span> 9 天</span>
+                </div> 
+                <p class="textone">你的借款已发生逾期，请尽快还款，否则会严重影响到您的信用并且我们会将您的信用情况如实上报给OJK</p>
+                <button class="wancheng2">关闭</button>
+                <button class="wancheng3">立即还款</button>
+            </div>
+            <!-- 可展期 -->
+            <div class="alert_wrap">
+                <p class="alert_succtxt">展期提醒</p>
+                <p style="margin-bottom: 0.54rem;"><span class="textone">UKT9010800002</span><span class="alerttxt2">可展期</span></p>
+                <div class="alert_num"> 
+                    <span>1.400.000</span>
+                    <span>7</span>
+                </div>
+                <div class="amount" style="margin-bottom: 0.5rem;">
+                    <span>借款金额(Rp）</span>
+                    <span>借款期限(hari）</span>
+                </div> 
+                <div class="amount">
+                    <span>借款日期</span>
+                    <span> 2018-02-24</span>
+                </div> 
+                <div class="amount">
+                    <span>应还款日期 </span>
+                    <span> 2018-03-01</span>
+                </div> 
+                <div class="amount">
+                    <span>逾期天数 </span>
+                    <span> 9 天</span>
+                </div> 
+                <button class="wancheng2">关闭</button>
+                <button class="wancheng3">立即还款</button>
+            </div>
+        </div>
+    </div>
+   <div class="home_warp">
+        <div class="home_top">
+            <h1 >AdaModal</h1>
+            <div class="home_tl right">
+                <span>TKB90</span>
+                <span>|</span>
+                <span>99.99%</span>
+            </div>
+        </div>
+        <div class="home_bottom">
+            <p class="sm_title">Jumlah Pinjaman Maks</p>
+            <div class="home_bone">
+                <div class="home_boneimg left"><img src="./wap/img/rp2.png" alt=""></div>
+                <div class="home_bonetxt left"><span>5.000.000</span></div>
+            </div>
+            <div class="home_two"><button id="edit"> <a href="./loaninformation.html" style="color: #fff;"> PINJAM SEKARANG</a> </button></div>
+            <div class="home_three">
+                <div class="home_thrimg left">
+                    <img src="./wap/img/mar2.png" alt="">
+                </div>
+                <div class="home_thrtxt float"><span>Bunga:0.3%-0.8%/Hari</span></div>
+            </div>
+            <div class="home_fore border">
+                <div class="home_foreimg">
+                    <img src="./wap/img/jum2.png" alt="">
+                </div>
+                <div class="home_foretxt1"><span>Jumlah Pinjaman(Rp)</span></div>
+                <div class="home_foretxt2"><span>61-180 Hari</span></div>
+            </div>
+            <div class="home_fore">
+                <div class="home_foreimg">
+                    <img src="./wap/img/ser2.png" alt="">
+                </div>
+                <div class="home_foretxt1"><span>Sertifikasi identita</span></div>
+                <div class="home_foretxt2"><span>KTP</span></div>
+            </div>
+            <div class="home_fore">
+                <div class="home_foreimg">
+                    <img src="./wap/img/mak2.png" alt="">
+                </div>
+                <div class="home_foretxt1"><span>Maksimal Bunga</span></div>
+                <div class="home_foretxt2"><span>100%/Tahun</span></p>
+            </div>
+        </div>
+   </div>
+   <script>
+      $('.alert-box').fadeIn();
+       
+        $('button').on('click', function() {
+            $('.alert-box').fadeOut();
+          
+        });
+   </script> 
+</body>
+</html>

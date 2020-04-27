@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紧急联系人</title>
+    <script src="./wap/js/jquery.min.js"></script>
+    <script src="./wap/js/rem.js"></script>
+    <link rel="stylesheet" href="./wap/css/init.css">
+    <link rel="stylesheet" href="./wap/css/index.css">
+    <style>
+        html,
+        body {
+            background: #FFFFFF;
+        }
+    </style>
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="loan_wrap">
+        <div class="loan_header1">
+            <div class="jobheader_img">
+                <div class="loan_head_one">
+                    <div class="loan_hl left"><img src="./wap/img/left2.png" alt=""></div>
+                    <div class="loan_htxt left"><span>Data Pribadi </span></div>
+                </div>
+                <div class="jobhead_step">
+                    <span>05</span>
+                    <span class="jobhead_step_2">/06</span>
+                </div>
+            </div>
+
+        </div>
+        <div style="height: 3rem;"></div>
+        <div class="job_bottom">
+            <ul class="job_list">
+                <li>
+                    <div class="left1"><span>1</span></div>
+                    <div class="left">
+                        <p>Nama</p>
+                        <p class="sm_title"><input type="text" placeholder="Tolong masukkan"></p>
+                    </div>
+                </li>
+                <div></div>
+
+                <li>
+                    <div class="left1 none"><span>1</span></div>
+                    <div class="left">
+                        <p>Agama</p>
+                        <p class="sm_title"><input type="text" placeholder="Silahkan pilih  " disabled> </p>
+                    </div>
+                    <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+                </li>
+                <div class="joblist_body1">内容内容内容</div>
+
+                <li>
+                    <div class="left1 none"><span>1</span></div>
+                    <div class="left">
+                        <p>Jenis Kelamin</p>
+                        <p class="sm_title"><input type="text" placeholder="Tolong masukkan"></p>
+                    </div>
+                </li>
+                <div></div>
+
+                <li>
+                    <div class="left1 "><span class="color1">2</span></div>
+                    <div class="left">
+                        <p>Nama</p>
+                        <p class="sm_title"><input type="text" placeholder="Tolong masukkan"></p>
+                    </div>
+                </li>
+                <div></div>
+
+                <li>
+                    <div class="left1 none"><span >2</span></div>
+                    <div class="left">
+                        <p>Agama</p>
+                        <p class="sm_title"><input type="text" placeholder="Silahkan pilih  " disabled> </p>
+                    </div>
+                    <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+                </li>
+                <div class="joblist_body1">内容内容内容</div>
+
+                <li>
+                    <div class="left1 none"><span>2</span></div>
+                    <div class="left">
+                        <p>Jenis Kelamin</p>
+                        <p class="sm_title"><input type="text" placeholder="Tolong masukkan"></p>
+                    </div>
+                </li>
+                <div></div>
+                <li>
+                    <div class="left1 "><span class="color2">3</span></div>
+                    <div class="left">
+                        <p>Nama</p>
+                        <p class="sm_title"><input type="text" placeholder="Tolong masukkan"></p>
+                    </div>
+                </li>
+                <div></div>
+
+                <li>
+                    <div class="left1 none"><span >2</span></div>
+                    <div class="left">
+                        <p>Agama</p>
+                        <p class="sm_title"><input type="text" placeholder="Silahkan pilih  " disabled> </p>
+                    </div>
+                    <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+                </li>
+                <div class="joblist_body1">内容内容内容</div>
+
+                <li>
+                    <div class="left1 none"><span>2</span></div>
+                    <div class="left">
+                        <p>Jenis Kelamin</p>
+                        <p class="sm_title"><input type="text" placeholder="Tolong masukkan"></p>
+                    </div>
+                </li>
+                <div></div>
+                <li>
+                    <div class="left1 "><span class="color3">4</span></div>
+                    <div class="left">
+                        <p>Nama</p>
+                        <p class="sm_title"><input type="text" placeholder="Tolong masukkan"></p>
+                    </div>
+                </li>
+                <div></div>
+
+                <li>
+                    <div class="left1 none"><span >2</span></div>
+                    <div class="left">
+                        <p>Agama</p>
+                        <p class="sm_title"><input type="text" placeholder="Silahkan pilih  " disabled> </p>
+                    </div>
+                    <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+                </li>
+                <div class="joblist_body1">内容内容内容</div>
+
+                <li>
+                    <div class="left1 none"><span>2</span></div>
+                    <div class="left">
+                        <p>Jenis Kelamin</p>
+                        <p class="sm_title"><input type="text" placeholder="Tolong masukkan"></p>
+                    </div>
+                </li>
+                <div></div>
+            </ul>
+            <button class="segera">Segera rentenir</button>
+        </div>
+
+    </div>
+
+    <script>
+        $(".job_list").on("click", " li", function () {
+            var next = $(this).next();
+            next.slideToggle("slow");
+            $(".joblist_body1").not(next).slideUp();
+        })
+    </script>
+</body>
+
+</html>

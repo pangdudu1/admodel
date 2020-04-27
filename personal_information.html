@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人信息</title>
+  <script src="./wap/js/jquery.min.js"></script>
+  <script src="./wap/js/rem.js"></script>
+  <link rel="stylesheet" href="./wap/css/init.css">
+  <link rel="stylesheet" href="./wap/css/index.css">
+  <style>
+    html,
+    body {
+      background: #FFFFFF;
+    }
+  </style>
+</head>
+<style>
+ 
+</style>
+
+<body>
+  <div class="loan_wrap">
+    <div class="loan_header1">
+      <div class="jobheader_img">
+        <div class="loan_head_one">
+          <div class="loan_hl left"><img src="./wap/img/left2.png" alt=""></div>
+          <div class="loan_htxt left"><span>Data Pribadi </span></div>
+        </div>
+        <div class="jobhead_step">
+          <span>04</span>
+          <span class="jobhead_step_2">/06</span>
+        </div>
+      </div>
+
+    </div>
+    <div style="height: 3rem;"></div>
+    <div class="job_bottom">
+      <ul class="job_list">
+
+        <li>
+          <div class="left">
+            <p>Nama Keluarga Anda</p>
+            <p class="sm_title"><input type="text" placeholder="Sliakan isi"> </p>
+          </div>
+        </li>
+        <div></div>
+
+        <li>
+          <div class="left">
+            <p>Agama</p>
+            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled>  </p>
+          </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+        </li>
+        <div class="joblist_body">内容内容内容</div>
+
+        <li>
+          <div class="left">
+            <p>Jenis Kelamin</p>
+            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
+          </div>
+        </li>
+        <div class="joblist_body">内容内容内容</div>
+        <li>
+          <div class="left">
+            <p>Tanggal Lahir</p>
+            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
+          </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+        </li>
+        <div class="joblist_body">内容内容内容</div>
+
+        <li>
+          <div class="left">
+            <p>Lama Tinggal</p>
+            <p class="sm_title"><input type="text" placeholder="Tolong masukkan" disabled></p>
+          </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+        </li>
+        <div class="joblist_body">内容内容内容</div>
+
+        <li>
+            <div class="left">
+              <p>Alamat Tempat Tinggal</p>
+              <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
+            </div>
+            <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+          </li>
+          <div class="joblist_body">内容内容内容</div>
+
+        <li>
+          <div class="left">
+            <p>Alamat Lengkap</p>
+            <p class="sm_title"><input type="text" placeholder="Silahkan pilih"></p>
+          </div>
+        </li>
+        <div></div>
+        <li>
+            <div class="left">
+              <p>Tempat Lahir</p>
+              <p class="sm_title"><input type="text" placeholder="Silahkan pilih"></p>
+            </div>
+          </li>
+          <div></div>
+
+        <li>
+          <div class="left">
+            <p>Tingkat Pendidikan</p>
+            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
+          </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+        </li>
+        <div class="joblist_body">内容内容内容</div>
+
+        <li>
+          <div class="left">
+            <p>Status Perkawinan</p>
+            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
+          </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+        </li>
+        <div class="joblist_body">内容内容内容</div>
+        <li>
+          <div class="left">
+            <p>Lama Bekerja</p>
+            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled> </p>
+          </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+        </li>
+        <div class="joblist_body">内容内容内容</div>
+        <li>
+            <div class="left">
+              <p>Jebatan</p>
+              <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
+            </div>
+            <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+          </li>
+          <div class="joblist_body">内容内容内容</div>
+      </ul>
+      <button class="segera">Segera rentenir</button>
+    </div>
+    
+  </div>
+
+  <script>
+    $(".job_list").on("click", " li", function () {
+      var next = $(this).next();
+      next.slideToggle("slow");
+      $(".joblist_body").not(next).slideUp();
+    })
+  </script>
+</body>
+
+</html>
