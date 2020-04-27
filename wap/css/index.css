@@ -7,7 +7,7 @@
     color: #9A9A9A;
     font-size: 0.24rem;
 }
-.sm_title input{ height: 0.3rem;font-size: 0.26rem;width: 4rem;}
+.sm_title input[type="text"],.sm_title input[type="number"]{ height: 0.3rem;font-size: 0.26rem;width: 5rem;}
 .sm_title input::-webkit-input-placeholder {
     color: #D2D2D2;
     font-size: 0.26rem;
@@ -20,6 +20,11 @@
 }
 .sm_title input:-ms-input-placeholder {
   color: #D2D2D2;
+}
+.sm_title select{
+    width: 4rem;
+    padding: 0.1rem 0.2rem;
+    border: 1px solid #EAEBED;
 }
 .border{
     border-top: 1px solid #ECECEC;
@@ -40,7 +45,7 @@ img{
 .alert_num span:nth-child(1){width: 60%;display: inline-block;}
 .alert_num span:nth-child(2){width: 30%;display: inline-block;}
 .none{opacity: 0;}
-.height{height: 2rem;}
+.height{height: 2.3rem;}
 .color1{background: #72acff !important;}
 .color2{background: #82FFD3 !important;}
 .color3{background: #7159EF !important;}
@@ -224,7 +229,7 @@ img{
 .home_fore .home_foretxt2{float: right;margin-top: 0.03rem;color: #131A22;font-weight: 600;font-size: 0.24rem;}
 /* 借款信息 一次性借款 */
 .loan_wrap{color: #fff; }
-.loan_header,.loan_header1{background: #7258FF;background: linear-gradient(90deg, #B18FFF,#7258FF);position: fixed;width: 100%;top: 0;z-index: 3;}
+.loan_header,.loan_header1{background: #7258FF;background: linear-gradient(90deg, #B18FFF,#7258FF);position: fixed;width: 100%;top: 0;z-index: 3;padding-top: 0.3rem;}
 .loan_header1{background: #7159EF;background: linear-gradient(90deg,#82FFD3,#7159EF);}
 .loan_head_one{overflow: hidden;line-height: 0.41rem;margin-bottom: 0.61rem;padding: 0.4rem 0.4rem 0 0.4rem;}
 .loan_hl{width: 0.32rem;height: 0.26rem;margin-right: 0.28rem;}
@@ -361,7 +366,12 @@ img{
 .joblist_body:not(:nth-child(2)),.joblist_body1:not(:nth-child(2))  {
   display: none;
 }
+/* 我的 */
 
+
+.my_wrap{padding: 0.2rem;}
+.my-wrap_head{background: #fff;}
+.loading{position: absolute;top: 2rem;left: 45%; display: none;}
 
 
 

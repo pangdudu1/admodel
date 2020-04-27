@@ -1,0 +1,4 @@
+2 版本 压缩包名称为2.0
+home 页   新增loading   之后使用loading   增加：<div class="loading"><img src="./wap/img/5-121204193R5-50.gif" alt=""></div> 控制隐藏显示即可
+          按钮调用安卓方法
+loaninformation  滑动条事件

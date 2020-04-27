@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>个人信息</title>
+  <title>Data Pribadi </title>
   <script src="./wap/js/jquery.min.js"></script>
   <script src="./wap/js/rem.js"></script>
   <link rel="stylesheet" href="./wap/css/init.css">
@@ -26,7 +27,7 @@
       <div class="jobheader_img">
         <div class="loan_head_one">
           <div class="loan_hl left"><img src="./wap/img/left2.png" alt=""></div>
-          <div class="loan_htxt left"><span>Data Pribadi </span></div>
+          <div class="loan_htxt left"><span>Informasi perusahaan</span></div>
         </div>
         <div class="jobhead_step">
           <span>04</span>
@@ -35,14 +36,14 @@
       </div>
 
     </div>
-    <div style="height: 3rem;"></div>
+    <div style="height: 3.3rem;"></div>
     <div class="job_bottom">
       <ul class="job_list">
 
         <li>
           <div class="left">
             <p>Nama Keluarga Anda</p>
-            <p class="sm_title"><input type="text" placeholder="Sliakan isi"> </p>
+            <p class="sm_title"><input type="text" placeholder="Sliakan isi" oninput="if(value.length>40)value=value.slice(0,40)"></p>
           </div>
         </li>
         <div></div>
@@ -50,19 +51,25 @@
         <li>
           <div class="left">
             <p>Agama</p>
-            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled>  </p>
+            <p class="sm_title">
+              <input type="radio"><label for="">单选1</label>
+              <input type="radio"><label for="">单选2</label>
+            </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
-        <div class="joblist_body">内容内容内容</div>
+        <div></div>
 
         <li>
           <div class="left">
             <p>Jenis Kelamin</p>
-            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
+            <p class="sm_title">
+              <input type="radio"><label for="">单选1</label>
+              <input type="radio"><label for="">单选2</label>
+            </p>
           </div>
         </li>
-        <div class="joblist_body">内容内容内容</div>
+        <div></div>
         <li>
           <div class="left">
             <p>Tanggal Lahir</p>

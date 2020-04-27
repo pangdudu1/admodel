@@ -48,7 +48,7 @@
                         <div class="slider-panel">
                             <div class="slider-box">
                                 <p class="slider-value" id="slider-value"></p>
-                                <input type="range" min="0" step="1" max="3000" value="0" id="slider">
+                                <input type="range" min="0" step="1" max="3000" value="1500" id="slider">
                             </div>
                             <!-- <p><span class='slider-percentage'>0</span>%</p> -->
                         </div>
@@ -125,7 +125,7 @@
                         <div class="slider-panel1">
                             <div class="slider-box1">
                                 <p class="slider-value1" ></p>
-                                <input type="range" min="0" step="1" max="50" value="0" id="slider1">
+                                <input type="range" min="0" step="1" max="50" value="12" id="slider1">
                             </div>
                         </div>
                         <p class="sm_title padd">Meminjam tenggat wak</p>
@@ -231,24 +231,32 @@
 
             //滑动条
             var num =  $('#slider').attr('max');
-            $('#slider').on('mousemove touchmove touchend click', moveSlider)
+            $('#slider').on('mousemove touchmove touchend click',moveSlider)
             function moveSlider() {
-                let sliderValue = parseInt($(this).val());
-                console.log(sliderValue/num)
-                $('#slider-value').css('width', sliderValue/num*100 + '%');
-                $('.slider-num').text(sliderValue);
+                var amountlist = [1000,2000,3000,4000]
+
+                var maxnum = Math.max.apply(null, amountlist);
+                var maxmin = Math.min.apply(null, amountlist);
+                var length = 100 / amountlist.length;
+                console.log(length);
+
+
+                // let sliderValue = parseInt($(this).val());
+                // console.log(sliderValue/num)
+                $('#slider-value').css('width', 25 + '%');
+                // $('.slider-num').text(sliderValue);
             }
 
 
-            var num1 =  $('#slider1').attr('max');
+            // var num1 =  $('#slider1').attr('max');
 
-            $('#slider1').on('mousemove touchmove touchend click', moveSlider1)
-            function moveSlider1() {
-                let sliderValue1 = parseInt($(this).val());
-                $('.slider-value1').css('width', sliderValue1/num1*100 + '%');
-                // console.log(sliderValue)
-                $('.slider-num1').text(sliderValue1);
-            }
+            // $('#slider1').on('mousemove touchmove touchend click', moveSlider1)
+            // function moveSlider1() {
+            //     let sliderValue1 = parseInt($(this).val());
+            //     $('.slider-value1').css('width', sliderValue1/num1*100 + '%');
+            //     // console.log(sliderValue)
+            //     $('.slider-num1').text(sliderValue1);
+            // }
             //颜色随机
             // function rand(number) {
             //     return Math.floor(Math.random() * number);
