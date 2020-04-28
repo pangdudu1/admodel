@@ -5,11 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>个人信息</title>
-  <title>Data Pribadi </title>
-  <script src="./wap/js/jquery.min.js"></script>
-  <script src="./wap/js/rem.js"></script>
+    <!-- <title>Data Pribadi </title> -->
   <link rel="stylesheet" href="./wap/css/init.css">
   <link rel="stylesheet" href="./wap/css/index.css">
+  <link rel="stylesheet" href="./wap/mdate/needcss/Mdate.css">
+  <link rel="stylesheet" href="./wap/swiper/public.css">
+  <link rel="stylesheet" href="./wap/swiper/swiper.min.css">
+  <script src="./wap/js/jquery.min.js"></script>
+  <script src="./wap/js/rem.js"></script>
+  <!-- 日期选择 -->
+  <script src="./wap/mdate/iScroll.js"></script>
+  <script src="./wap/mdate/Mdate.js"></script>
+  <!-- 联动 -->
+  <script src="wap/js/index.js"></script>
+  <!-- 下拉 -->
+  <script src="./wap/swiper/dySeleect.js"></script>
+  <script src="./wap/swiper/swiper.min.js"></script>
+  <!-- <script src="./wap/swiper/index.js"></script> -->
+
   <style>
     html,
     body {
@@ -18,7 +31,7 @@
   </style>
 </head>
 <style>
- 
+
 </style>
 
 <body>
@@ -43,7 +56,8 @@
         <li>
           <div class="left">
             <p>Nama Keluarga Anda</p>
-            <p class="sm_title"><input type="text" placeholder="Sliakan isi" oninput="if(value.length>40)value=value.slice(0,40)"></p>
+            <p class="sm_title"><input type="text" placeholder="Sliakan isi"
+                oninput="if(value.length>40)value=value.slice(0,40)"></p>
           </div>
         </li>
         <div></div>
@@ -52,111 +66,421 @@
           <div class="left">
             <p>Agama</p>
             <p class="sm_title">
-              <input type="radio"><label for="">单选1</label>
-              <input type="radio"><label for="">单选2</label>
+              <button class="btn5">打开下拉2</button>
             </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
-        <div></div>
+        <div class="select_box select_box5"></div>
 
         <li>
           <div class="left">
             <p>Jenis Kelamin</p>
             <p class="sm_title">
-              <input type="radio"><label for="">单选1</label>
-              <input type="radio"><label for="">单选2</label>
+              <button class="btn4">打开下拉2</button>
+            </p>
+          </div>
+        </li>
+        <div class="select_box select_box4"></div>
+        <li>
+          <div class="left">
+            <p>Tanggal Lahir</p>
+            <p class="sm_title">
+              <input type="text" id="dateSelectorOne" placeholder="选择日期">
+              <!-- <input type="text" placeholder="Silahkan pilih" id="tanggal"></p> -->
+          </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+        </li>
+        <div class="joblist_body"></div>
+
+        <li>
+          <div class="left">
+            <p>Lama tinggal</p>
+            <p class="sm_title"><input type="text" id="dateSelectortwo1" placeholder="选择日期"></p>
+          </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+        </li>
+        <div class="joblist_body"></div>
+        <li>
+          <div class="left">
+            <p>Alamat Tempat Tinggal</p>
+            <p class="sm_title"><input type="text" placeholder="选择地址" id="address-input1"></p>
+          </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+        </li>
+        <div id="container1"></div>
+        <li>
+          <div class="left">
+            <p>Alamat Lengkap</p>
+            <p class="sm_title">
+              <input type="text" placeholder="Sliakan isi" oninput="if(value.length>60)value=value.slice(0,60)">
             </p>
           </div>
         </li>
         <div></div>
         <li>
           <div class="left">
-            <p>Tanggal Lahir</p>
-            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
-          </div>
-          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
-        </li>
-        <div class="joblist_body">内容内容内容</div>
-
-        <li>
-          <div class="left">
-            <p>Lama Tinggal</p>
-            <p class="sm_title"><input type="text" placeholder="Tolong masukkan" disabled></p>
-          </div>
-          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
-        </li>
-        <div class="joblist_body">内容内容内容</div>
-
-        <li>
-            <div class="left">
-              <p>Alamat Tempat Tinggal</p>
-              <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
-            </div>
-            <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
-          </li>
-          <div class="joblist_body">内容内容内容</div>
-
-        <li>
-          <div class="left">
-            <p>Alamat Lengkap</p>
-            <p class="sm_title"><input type="text" placeholder="Silahkan pilih"></p>
+            <p>Tempat Lahir</p>
+            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" id="address-input2"></p>
           </div>
         </li>
-        <div></div>
-        <li>
-            <div class="left">
-              <p>Tempat Lahir</p>
-              <p class="sm_title"><input type="text" placeholder="Silahkan pilih"></p>
-            </div>
-          </li>
-          <div></div>
-
+        <div id="container2"></div>
         <li>
           <div class="left">
             <p>Tingkat Pendidikan</p>
-            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
+            <p class="sm_title">
+              <button class="btn3">打开下拉2</button>
+            </p>
           </div>
-          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+          <div class="right xia"></div>
         </li>
-        <div class="joblist_body">内容内容内容</div>
-
+        <div class="select_box select_box3"></div>
         <li>
           <div class="left">
             <p>Status Perkawinan</p>
-            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
+            <p class="sm_title">
+              <button class="btn2">打开下拉2</button>
+            </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
-        <div class="joblist_body">内容内容内容</div>
+        <div class="select_box select_box2"></div>
         <li>
           <div class="left">
-            <p>Lama Bekerja</p>
-            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled> </p>
+            <p>Kapan Anda mulai bekerja</p>
+            <p class="sm_title">
+              <input type="text" id="dateSelectortwo2" placeholder="选择日期">
+            </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
-        <div class="joblist_body">内容内容内容</div>
+        <div></div>
         <li>
-            <div class="left">
-              <p>Jebatan</p>
-              <p class="sm_title"><input type="text" placeholder="Silahkan pilih" disabled></p>
-            </div>
-            <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
-          </li>
-          <div class="joblist_body">内容内容内容</div>
+          <div class="left">
+            <p>Judul pekerjaan</p>
+            <p class="sm_title">
+                <button class="btn1">打开下拉1</button>
+            </p>
+          </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+        </li>
+        <div class="select_box select_box1"></div>
       </ul>
       <button class="segera">Segera rentenir</button>
     </div>
-    
-  </div>
 
+  </div>
   <script>
-    $(".job_list").on("click", " li", function () {
-      var next = $(this).next();
-      next.slideToggle("slow");
-      $(".joblist_body").not(next).slideUp();
-    })
+
+      var hgS1 = new selectSwiper({
+        el: '.select_box1',
+        data: ['吃饭', '睡觉', '打豆豆'],
+        init: function(index) {
+            if (index !== -1) {
+                $('.btn1').html(this.data[index]);
+            }
+        },
+        okFunUndefind: function() {
+            alert('必须选择一项');
+            return false;
+        },
+        okFun: function(index) {
+            console.log(index);
+            $('.btn1').html(this.data[index]);
+        },
+        closeFun: function() {
+            console.log('取消');
+        },
+    });
+    $('.btn1').on('click', function() {
+        hgS1.openSelectSwiper();
+    });
+
+    var hgS2 = new selectSwiper({
+        el: '.select_box2',
+        data: ['吃饭', '睡觉', '打豆豆','1234'],
+        init: function(index) {
+            if (index !== -1) {
+                $('.btn2').html(this.data[index]);
+            }
+        },
+        okFunUndefind: function() {
+            alert('必须选择一项');
+            return false;
+        },
+        okFun: function(index) {
+            console.log(index);
+            $('.btn2').html(this.data[index]);
+        },
+        closeFun: function() {
+            console.log('取消');
+        },
+    });
+    $('.btn2').on('click', function() {
+        hgS2.openSelectSwiper();
+    });
+
+    var hgS3 = new selectSwiper({
+        el: '.select_box3',
+        data: ['吃饭', '睡觉', '打豆豆','sdsd'],
+        init: function(index) {
+            if (index !== -1) {
+                $('.btn3').html(this.data[index]);
+            }
+        },
+        okFunUndefind: function() {
+            alert('必须选择一项');
+            return false;
+        },
+        okFun: function(index) {
+            console.log(index);
+            $('.btn3').html(this.data[index]);
+        },
+        closeFun: function() {
+            console.log('取消');
+        },
+    });
+    $('.btn3').on('click', function() {
+        hgS3.openSelectSwiper();
+    });
+    var hgS4 = new selectSwiper({
+        el: '.select_box4',
+        data: ['吃饭', '睡觉', '打豆豆','121212'],
+        init: function(index) {
+            if (index !== -1) {
+                $('.btn4').html(this.data[index]);
+            }
+        },
+        okFunUndefind: function() {
+            alert('必须选择一项');
+            return false;
+        },
+        okFun: function(index) {
+            console.log(index);
+            $('.btn4').html(this.data[index]);
+        },
+        closeFun: function() {
+            console.log('取消');
+        },
+    });
+    $('.btn4').on('click', function() {
+        hgS4.openSelectSwiper();
+    });
+    var hgS5 = new selectSwiper({
+        el: '.select_box5',
+        data: ['吃饭', '睡觉', '打豆豆','212121'],
+        init: function(index) {
+            if (index !== -1) {
+                $('.btn5').html(this.data[index]);
+            }
+        },
+        okFunUndefind: function() {
+            alert('必须选择一项');
+            return false;
+        },
+        okFun: function(index) {
+            console.log(index);
+            $('.btn5').html(this.data[index]);
+        },
+        closeFun: function() {
+            console.log('取消');
+        },
+    });
+    $('.btn5').on('click', function() {
+        hgS5.openSelectSwiper();
+    });
+
+
+      var picker = new AjaxPicker({
+      title: '配送至', //选择器标题
+      tipText: ['省份', '城市', '区/县'],  //选择器提示语（可以一个也可以多个，对应每一栏的选择提示语）
+      input: 'address-input1', //点击触发选择器的input的id
+      container: 'container1', //选择器的容器的id
+      renderArr: [ //渲染函数数组，第一个函数对应第一个列表，以此类推，该数组中的函数数量和列表的数量一致
+        function () {
+          // 在这里写获取第一个列表数据的方法，通常是ajax
+          // 在成功回调中加入下面这行代码，并将获取的数据传入:
+          picker.render(
+            [
+              { 'value': '北京市', id: '0' },
+              { 'value': '1223', id: '2' },
+              { 'value': '32424', id: '3' },
+
+            ]
+          )
+          // 请确保你的获取到的数据是一个对象数组，并符合以下格式，每个对象至少拥有value(name)和id这两个key(将在用户选择完毕后返回)
+          // 如果data不是一个对象数组，或者不符合格式要求，那么你可能要做一下数据处理，才能保证数据成功渲染出来：
+
+          // example:
+          // $.ajax({
+          //   ...
+          //   success: function (data) {
+          //     picker.render(data)
+          //   }
+          // })
+        },
+        function () {
+          // 在这里写获取第二个列表数据的方法
+          // 你可以通过picker.result1获取用户在第一列表的选择结果
+          // picker.result1长这样：
+          // {
+          //   value: 'XXX',
+          //   id:'XXX',
+          //   index: 'XXX'
+          // }
+          // 在成功回调中加入下面这行代码，并将获取到的数据传入:
+          picker.render([
+            { 'value': '北京市', id: '0' },
+            { 'value': '1223', id: '2' },
+            { 'value': '32424', id: '3' },
+          ])
+        },
+        function () {
+          // 在这里写获取第三个列表数据的方法
+          // 你可以通过picker.result2获取用户在第二列表的选择结果
+          // picker.result2长这样：
+          // {
+          //   value: 'XXX',
+          //   id:'XXX',
+          //   index: 'XXX'
+          // }
+          // 在成功回调中加入下面这行代码，并将获取到的数据传入:
+          picker.render([
+            { 'value': '北京市', id: '0' },
+            { 'value': '1223', id: '2' },
+            { 'value': '32424', id: '3' },
+          ])
+        },
+        function () {
+          // 在这里写获取第三个列表数据的方法
+          // 你可以通过picker.result2获取用户在第二列表的选择结果
+          // picker.result2长这样：
+          // {
+          //   value: 'XXX',
+          //   id:'XXX',
+          //   index: 'XXX'
+          // }
+          // 在成功回调中加入下面这行代码，并将获取到的数据传入:
+          picker.render([
+            { 'value': '北京市', id: '0' },
+            { 'value': '1223', id: '2' },
+            { 'value': '32424', id: '3' },
+          ])
+        },
+      ],
+      success: function (arr) {
+        // 用户选择完毕后调用，返回结果数组
+        console.log(arr)
+      }
+    });
+
+      var picker = new AjaxPicker({
+      title: '配送至', //选择器标题
+      tipText: ['省份', '城市', '区/县'],  //选择器提示语（可以一个也可以多个，对应每一栏的选择提示语）
+      input: 'address-input2', //点击触发选择器的input的id
+      container: 'container2', //选择器的容器的id
+      renderArr: [ //渲染函数数组，第一个函数对应第一个列表，以此类推，该数组中的函数数量和列表的数量一致
+        function () {
+          // 在这里写获取第一个列表数据的方法，通常是ajax
+          // 在成功回调中加入下面这行代码，并将获取的数据传入:
+          picker.render(
+            [
+              { 'value': '北京市', id: '0' },
+              { 'value': '1223', id: '2' },
+              { 'value': '32424', id: '3' },
+
+            ]
+          )
+          // 请确保你的获取到的数据是一个对象数组，并符合以下格式，每个对象至少拥有value(name)和id这两个key(将在用户选择完毕后返回)
+          // 如果data不是一个对象数组，或者不符合格式要求，那么你可能要做一下数据处理，才能保证数据成功渲染出来：
+
+          // example:
+          // $.ajax({
+          //   ...
+          //   success: function (data) {
+          //     picker.render(data)
+          //   }
+          // })
+        },
+        function () {
+          // 在这里写获取第二个列表数据的方法
+          // 你可以通过picker.result1获取用户在第一列表的选择结果
+          // picker.result1长这样：
+          // {
+          //   value: 'XXX',
+          //   id:'XXX',
+          //   index: 'XXX'
+          // }
+          // 在成功回调中加入下面这行代码，并将获取到的数据传入:
+          picker.render([
+            { 'value': '北京市', id: '0' },
+            { 'value': '1223', id: '2' },
+            { 'value': '32424', id: '3' },
+          ])
+        },
+        function () {
+          // 在这里写获取第三个列表数据的方法
+          // 你可以通过picker.result2获取用户在第二列表的选择结果
+          // picker.result2长这样：
+          // {
+          //   value: 'XXX',
+          //   id:'XXX',
+          //   index: 'XXX'
+          // }
+          // 在成功回调中加入下面这行代码，并将获取到的数据传入:
+          picker.render([
+            { 'value': '北京市', id: '0' },
+            { 'value': '1223', id: '2' },
+            { 'value': '32424', id: '3' },
+          ])
+        },
+        function () {
+          // 在这里写获取第三个列表数据的方法
+          // 你可以通过picker.result2获取用户在第二列表的选择结果
+          // picker.result2长这样：
+          // {
+          //   value: 'XXX',
+          //   id:'XXX',
+          //   index: 'XXX'
+          // }
+          // 在成功回调中加入下面这行代码，并将获取到的数据传入:
+          picker.render([
+            { 'value': '北京市', id: '0' },
+            { 'value': '1223', id: '2' },
+            { 'value': '32424', id: '3' },
+          ])
+        },
+      ],
+      success: function (arr) {
+        // 用户选择完毕后调用，返回结果数组
+        console.log(arr)
+      }
+    });
+
+    // $(".job_list").on("click", " li", function () {
+    //   var next = $(this).next();
+    //   next.slideToggle("slow");
+    //   $(".joblist_body").not(next).slideUp();
+    // })
+
+      new Mdate("dateSelectorOne");
+      new Mdate("dateSelectortwo1");
+      new Mdate("dateSelectortwo2");
+      new Mdate("dateShowBtn", {
+        acceptId: "dateSelectorTwo",
+        beginYear: "1998",
+        beginMonth: "10",
+        beginDay: "24",
+        endYear: "2020",
+        endMonth: "1",
+        endDay: "1",
+        format: "-"
+      });
+
+
+
+  
+   
   </script>
 </body>
 

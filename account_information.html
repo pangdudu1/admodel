@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>紧急联系人</title>
-    <script src="./wap/js/jquery.min.js"></script>
-    <script src="./wap/js/rem.js"></script>
+    <title>账号信息</title>
+    <!-- <title>Informasi akun</title> -->
+
     <link rel="stylesheet" href="./wap/css/init.css">
     <link rel="stylesheet" href="./wap/css/index.css">
+    <script src="./wap/js/jquery.min.js"></script>
+    <script src="./wap/js/rem.js"></script>
     <style>
         html,
         body {
+            width: 100%;
+            height: 100%;
             background: #FFFFFF;
+            /* background: linear-gradient(35deg, #82EEC8, #7258FF); */
         }
     </style>
 </head>
@@ -26,7 +31,7 @@
             <div class="jobheader_img">
                 <div class="loan_head_one">
                     <div class="loan_hl left"><img src="./wap/img/left2.png" alt=""></div>
-                    <div class="loan_htxt left"><span>Data Pribadi </span></div>
+                    <div class="loan_htxt left"><span>Informasi akun</span></div>
                 </div>
                 <div class="jobhead_step">
                     <span>05</span>
@@ -35,52 +40,29 @@
             </div>
 
         </div>
-        <div style="height: 3.4rem;"></div>
+        <div style="height: 3.3rem;"></div>
         <div class="job_bottom">
             <ul class="job_list">
                 <li>
-                    <div class="left1"><span>1</span></div>
                     <div class="left">
                         <p>Nomor Whatsapp</p>
-                        <p class="sm_title"><input type="number" placeholder="Tolong masukkan"  oninput="if(value.length>13)value=value.slice(0,13)" ></p>
+                        <p class="sm_title"><input type="number" placeholder="Tolong masukkan"
+                                oninput="if(value.length>13)value=value.slice(0,13)"></p>
                     </div>
                 </li>
                 <li>
-                    <div class="left1 none"><span></span></div>
                     <div class="left">
                         <p>No.NPWP(opsional)</p>
-                        <p class="sm_title"><input type="text" placeholder="Silahkan pilih"  oninput="if(value.length>40)value=value.slice(0,40)" > </p>
+                        <p class="sm_title"><input type="text" placeholder="Silahkan pilih"
+                                oninput="if(value.length>40)value=value.slice(0,40)"> </p>
                     </div>
                     <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
                 </li>
                 <li>
-                    <div class="left1 none"><span></span></div>
                     <div class="left">
                         <p>Email</p>
-                        <p class="sm_title"><input type="email" placeholder="Tolong masukkan"  id="txtEmail"><span id="spinfo"></span></p>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="left1"><span class="color1">2</span></div>
-                    <div class="left">
-                        <p>Nomor Whatsapp</p>
-                        <p class="sm_title"><input type="number" placeholder="Tolong masukkan"  oninput="if(value.length>13)value=value.slice(0,13)" ></p>
-                    </div>
-                </li>
-                <li>
-                    <div class="left1 none"><span></span></div>
-                    <div class="left">
-                        <p>No.NPWP(opsional)</p>
-                        <p class="sm_title"><input type="text" placeholder="Silahkan pilih"  oninput="if(value.length>40)value=value.slice(0,40)" > </p>
-                    </div>
-                    <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
-                </li>
-                <li>
-                    <div class="left1 none"><span></span></div>
-                    <div class="left">
-                        <p>Email</p>
-                        <p class="sm_title"><input type="email" placeholder="Tolong masukkan"  id="txtEmail1"><span id="spinfo1"></span></p>
+                        <p class="sm_title"><input type="email" placeholder="Tolong masukkan" id="txtEmail"><span
+                                id="spinfo"></span></p>
                     </div>
                 </li>
             </ul>
@@ -88,7 +70,6 @@
         </div>
 
     </div>
-
     <script type="text/javascript">
         $(function () {
             var state = false;
@@ -109,13 +90,15 @@
                     }
                     else {
                         $("#spinfo").text('');
-                
-                        state=true;
+
+                        state = true;
                     }
                 }
             })
         })
     </script>
+
+
 </body>
 
 </html>

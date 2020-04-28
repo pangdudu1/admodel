@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>还款</title>
+    <!-- <title>Pembayaran</title> -->
+</head>
+<script src="./wap/js/jquery.min.js"></script>
+<script src="./wap/js/rem.js"></script>
+<link rel="stylesheet" href="./wap/css/init.css">
+<link rel="stylesheet" href="./wap/css/index.css">
+<style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background: #F5F6FA
+            /* background: linear-gradient(35deg, #82EEC8, #7258FF); */
+    }
+</style>
+
+<body>
+    <div class="repayment">
+        <div class="repayment_top">
+            <div class="repayment_one">
+                <div class="loan_hl left">《</div>
+                <div class="loan_htxt left"><span>Pembayaran</span></div>
+            </div>
+            <div class="repaymenttwo">
+                <p class="repayment_rp">
+                    <span class="repaymentsm">Rp</span>
+                    <span class="repaymentbig">1.400.000</span>
+                </p>
+                <p class="textone">Tinggal pembayaran</p>
+                <div class="repayment_img"><img src="./wap/img/tinggal.png" alt=""></div>
+            </div>
+        </div>
+        <div class="repayment_bottom">
+            <p class="textone">Silakan pilih cara untuk membayar kembali</p>
+            <div class="repaymnet_bottomone">
+                <div class="repaymnet_bottomone1">
+                    <div class="left repaymnet_one"><img src="./wap/img/va.png" alt=""></div>
+                    <div class="left">ATM</div>
+                    <div class="right repaymnet_two"><img src="./wap/img/xia.png" alt=""></div>
+                </div>
+                <div class="repayment_ko">
+                    <p>1102 5551 0255 6555</p>
+                    <div class="repayment_kode">Kode pembayaran kembali 02:59</div>
+                </div>
+            </div>
+
+
+            <div class="repaymnet_bottomone">
+                <div class="left repaymnet_one"><img src="./wap/img/otc.png" alt=""></div>
+                <div class="left">ATM</div>
+                <div class="right repaymnet_two"><img src="./wap/img/xia.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(".repaymnet_bottomone").on('click', function () {
+        $('.repayment_ko').show()
+    })
+</script>
+
+</html>

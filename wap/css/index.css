@@ -9,7 +9,7 @@
 }
 .sm_title input[type="text"],.sm_title input[type="number"]{ height: 0.3rem;font-size: 0.26rem;width: 5rem;}
 .sm_title input::-webkit-input-placeholder {
-    color: #D2D2D2;
+    color: #D2D2D2 !important;
     font-size: 0.26rem;
 }
 .sm_title input:-moz-placeholder {
@@ -25,7 +25,9 @@
     width: 4rem;
     padding: 0.1rem 0.2rem;
     border: 1px solid #EAEBED;
+    background: none;
 }
+.sm_title span{color: red; font-size: 0.3rem;font-weight: 800;}
 .border{
     border-top: 1px solid #ECECEC;
     padding-top: 0.48rem;
@@ -50,6 +52,9 @@ img{
 .color2{background: #82FFD3 !important;}
 .color3{background: #7159EF !important;}
 .color3{}
+#dateSelectorOne{color: #9A9A9A;}
+#dateSelectortwo1{color: #9A9A9A;}
+#dateSelectortwo2{color: #9A9A9A;}
 /* 模态框 */
 .alert-box {
 	display:table;
@@ -79,7 +84,7 @@ img{
 .alert_wrap1{
     /* height: 0.71rem; */
 }
-.wancheng,.wancheng3,.segera{
+.wancheng,.wancheng3,.segera,.mendapat{
     width: 5rem;
     height: 0.84rem;
     line-height: 0.39rem;
@@ -93,6 +98,7 @@ img{
 .wancheng2{width: 2.3rem;height: 0.84rem;color: #7C69EF;border: 1px solid #7C69EF;border-radius: 0.12rem;}
 .wancheng3{width:2.3rem;border-radius: 0.12rem;margin-left: 0.4rem;}
 .segera{width: 100%;background: linear-gradient(to bottom,#8B63E6,#7565E4);color: #fff;}
+.mendapat{width: 100%;background: rgba(124, 105, 239, 0.1);;color: #7C69EF;}
 .alerttxt{ padding: 0.01rem 0.17rem; border: 1px solid #7C69EF;color: #7C69EF;border-radius: 8px;margin-left: 0.17rem;font-weight: 600;display: inline-block;}
 .alerttxt1{padding:0.01rem 0.17rem; border: 1px solid #FF4747;color: #FF4747;border-radius: 8px;margin-left: 0.17rem;font-weight: 600;display: inline-block;}
 .alerttxt2{padding: 0.01rem 0.17rem; border: 1px solid #4BCA97;color: #4BCA97;border-radius: 8px;margin-left: 0.17rem;font-weight: 600;display: inline-block;}
@@ -369,16 +375,39 @@ img{
 /* 我的 */
 
 
-.my_wrap{padding: 0.2rem;}
-.my-wrap_head{background: #fff;}
+.my_wrap{}
+.my-wrap_head{background: #fff;padding: 0.4rem;}
+.my_title{font-size: 0.46rem;color: #131A22;font-weight: 400;}
+.my_img{width: 1.52rem;height: 1.47rem;margin: 0.36rem auto;background: red;border-radius: 50%;}
 .loading{position: absolute;top: 2rem;left: 45%; display: none;}
-
-
-
-
-
-
-
+.my_leave{color: #131A22;font-size: 0.34rem;text-align: center;font-weight: 600;margin: 0.2rem 0;}
+.my_leave span{font-size: 0.24rem;padding: 0.03rem 0.12rem;text-align: center;border: 0.01rem solid #7C69EF;color: #7C69EF;border-radius: 0.32rem;display: inline-block;}
+.my_num{font-size: 0.28rem;text-align: center;color: rgba(19, 26, 34, 0.3);}
+.my_bottom{padding: 0.2rem 0.4rem;}
+.my_bottomone,.repaymnet_bottomone{overflow:hidden;background: #fff;border-radius: 0.08rem;margin: 0.2rem 0;color: #131A22;font-size: 0.3rem;font-weight: 800;padding: 0.29rem 0.31rem 0.23rem 0.51rem;line-height: 0.82rem;}
+.my_itemone{width:0.82rem;height:0.82rem;margin-right: 0.34rem;}
+.my_itemthree{width: 0.14rem;height: 0.23rem;}
+/* bill */
+.bill_bottom{color: #FFFFFF;padding: 0 0 0.58rem 0.61rem;overflow: hidden;}
+.billb_one{width: 70%;}
+.bill_bottom .billsm{font-size: 0.26rem;}
+.bill_bottom .billbig{font-size: 0.6rem;}
+.bill_bottom .bill_title{opacity: .5;font-size: 0.26rem;margin-top: 0.24rem;}
+.repayment{}
+.repayment_top{background: #fff;}
+.repayment_one{margin-bottom: 0.61rem;overflow: hidden;border-bottom: 0.03rem solid #F5F6FA;padding: 0.67rem 0 0.2rem 0.3rem;}
+.repaymenttwo{color: #131A22;text-align: center;padding-bottom: 0.79rem;}
+.repayment_rp{padding-bottom: 0.2rem;}
+.repaymentsm{font-size: 0.4rem;}
+.repaymentbig{font-size: 0.9rem;}
+.repayment_img{margin: 0.66rem auto;width: 2.63rem;height: 1.95rem;}
+.repayment_bottom{padding: 0.6rem 0.4rem;}
+.repaymnet_bottomone{padding: 0.2rem 0.4rem;}
+.repaymnet_one{width: 0.8rem; height: 0.8rem;margin-right: 0.46rem;}
+.repaymnet_two{width: 0.24rem;height: 0.15rem;}
+.repayment_ko{text-align: center;display: none;}
+.repaymnet_bottomone1{overflow: hidden;}
+.repayment_kode{width: 100%;text-align: center;color: #9a9a9a;font-size: 0.26rem;background: #F5F6FA;}
 
 
 

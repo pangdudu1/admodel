@@ -48,7 +48,7 @@
                         <div class="slider-panel">
                             <div class="slider-box">
                                 <p class="slider-value" id="slider-value"></p>
-                                <input type="range" min="0" step="1" max="3000" value="1500" id="slider">
+                                <input type="range" min="0" step="1" max="80000000" value="1500" id="slider">
                             </div>
                             <!-- <p><span class='slider-percentage'>0</span>%</p> -->
                         </div>
@@ -228,26 +228,50 @@
             $('#dietaryPres1').prop("checked", true);
             $('#dietaryPres_1').prop("checked", true);
             // console.log($('.checkbox').prop('checked'))
-
             //滑动条
             var num =  $('#slider').attr('max');
-            $('#slider').on('mousemove touchmove touchend click',moveSlider)
-            function moveSlider() {
-                var amountlist = [1000,2000,3000,4000]
+            $('#slider').on('touchend click',moveSlider)//mousemove touchmove
+                function moveSlider() {
+                    var amountlist = [1000,2000,2200,3000,800000]
 
-                var maxnum = Math.max.apply(null, amountlist);
-                var maxmin = Math.min.apply(null, amountlist);
-                var length = 100 / amountlist.length;
-                console.log(length);
+                    var maxnum = Math.max.apply(null, amountlist);
+                    var minnum = Math.min.apply(null, amountlist);
+                    var length = 100 / amountlist.length;
+                    // console.log(length);
 
 
-                // let sliderValue = parseInt($(this).val());
-                // console.log(sliderValue/num)
-                $('#slider-value').css('width', 25 + '%');
-                // $('.slider-num').text(sliderValue);
+                    // let sliderValue = parseInt($(this).val());
+                    
+                    let arr = [];
+                    // amountlist.forEach((num, index) => {
+                    //     arr[index] = Math.abs(num - sliderValue);
+                    // });
+                    // // console.log("差数数组：",arr)
+                    // let minNumLength = amountlist[getMinIndex(arr)];
+                    var length1 = amountlist.length;
+                    var index = getMinIndex(arr);
+                    console.log(length1);
+                    // console.log("当前值："+sliderValue+"; 临近值："+minNumLength+";");
+                    // console.log($.inArray(minNumLength, arr)); 
+                    $('#slider-value').css('width', 100/length1 * 2+ '%');
+                    // console.log(100/length1);
+                    // $('.slider-num').text(sliderValue);
+                    // if(sliderValue == 0){
+                    // $('#slider-value').css('width', 0+ '%');
+                    //   }
             }
-
-
+            function getMinIndex(arr) {
+                var min = arr[0];
+                //声明了个变量 保存下标值
+                var index = 0;
+                for (var i = 0; i < arr.length; i++) {
+                    if (min > arr[i]) {
+                        min = arr[i];
+                        index = i;
+                    }
+                }
+                return index;
+            }
             // var num1 =  $('#slider1').attr('max');
 
             // $('#slider1').on('mousemove touchmove touchend click', moveSlider1)

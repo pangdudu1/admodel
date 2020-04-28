@@ -5,10 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>绑定银行卡</title>
-  <script src="./wap/js/jquery.min.js"></script>
-  <script src="./wap/js/rem.js"></script>
+
   <link rel="stylesheet" href="./wap/css/init.css">
   <link rel="stylesheet" href="./wap/css/index.css">
+  <link rel="stylesheet" href="./wap/swiper/public.css">
+  <link rel="stylesheet" href="./wap/swiper/swiper.min.css">
+  <script src="./wap/js/jquery.min.js"></script>
+  <script src="./wap/js/rem.js"></script>
+  <script src="./wap/swiper/dySeleect.js"></script>
+  <script src="./wap/swiper/swiper.min.js"></script>
   <style>
     html,
     body {
@@ -26,7 +31,7 @@
       <div class="jobheader_img">
         <div class="loan_head_one">
           <div class="loan_hl left"><img src="./wap/img/left2.png" alt=""></div>
-          <div class="loan_htxt left"><span>Data Pribadi </span></div>
+          <div class="loan_htxt left"><span>Informasi kontak</span></div>
         </div>
         <div class="jobhead_step">
           <span>06</span>
@@ -42,27 +47,27 @@
         <li>
           <div class="left">
             <p>Nama</p>
-            <p class="sm_title"><input type="text" placeholder="Tolong masukkan"> </p>
+            <p class="sm_title"><input type="text" placeholder="Tolong masukkan"  oninput="if(value.length>40)value=value.slice(0,40)"> </p>
           </div>
         </li>
-        <div></div>
 
         <li>
           <div class="left">
             <p>Nama bank </p>
-            <p class="sm_title"><input type="text" placeholder="Silahkan pilih " disabled>  </p>
+            <p class="sm_title">
+              <button class="btn2">打开下拉2</button>
+            </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
-        <div class="joblist_body">内容内容内容</div>
-
+        <div class="select_box select_box3"></div>
         <li>
           <div class="left">
             <p>Bank nomor cardbus</p>
-            <p class="sm_title"><input type="text" placeholder="Tolong masukkan"></p>
+            <p class="sm_title"><input type="number" placeholder="Tolong masukkan"  oninput="if(value.length>13)value=value.slice(0,13)"></p>
           </div>
         </li>
-        <div></div>
+     
       
        
       </ul>
@@ -72,11 +77,29 @@
   </div>
 
   <script>
-    $(".job_list").on("click", " li", function () {
-      var next = $(this).next();
-      next.slideToggle("slow");
-      $(".joblist_body").not(next).slideUp();
-    })
+     var hgS1 = new selectSwiper({
+        el: '.select_box3',
+        data: ['吃饭', '睡觉', '打豆豆','123456'],
+        init: function(index) {
+            if (index !== -1) {
+                $('.btn2').html(this.data[index]);
+            }
+        },
+        okFunUndefind: function() {
+            alert('必须选择一项');
+            return false;
+        },
+        okFun: function(index) {
+            console.log(index);
+            $('.btn2').html(this.data[index]);
+        },
+        closeFun: function() {
+            console.log('取消');
+        },
+    });
+    $('.btn2').on('click', function() {
+        hgS1.openSelectSwiper();
+    });
   </script>
 </body>
 

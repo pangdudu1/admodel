@@ -6,11 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>工作信息</title>
   <!-- <title>Informasi perusahaan</title> -->
+
+  <link rel="stylesheet" href="./wap/css/init.css">
+  <link rel="stylesheet" href="./wap/css/index.css">
+  <link rel="stylesheet" href="./wap/swiper/public.css">
+  <link rel="stylesheet" href="./wap/swiper/swiper.min.css">
   <script src="./wap/js/jquery.min.js"></script>
   <script src="./wap/js/rem.js"></script>
   <script src="./wap/js/index.js"></script>
-  <link rel="stylesheet" href="./wap/css/init.css">
-  <link rel="stylesheet" href="./wap/css/index.css">
+  <!-- 下拉 -->
+  <script src="./wap/swiper/dySeleect.js"></script>
+  <script src="./wap/swiper/swiper.min.js"></script>
   <style>
     html,
     body {
@@ -69,12 +75,11 @@
           <div class="left">
             <p>Bidang usaha</p>
             <p class="sm_title">
-              <input type="radio" name="123"><label for="">单选1</label>
-              <input type="radio" name="123"><label for="">单选1</label>
+              <button class="btn2">打开下拉2</button>
             </p>
           </div>
         </li>
-        <div></div>
+        <div class="select_box select_box3"></div>
         <li>
           <div class="left">
             <p>Telepon perusahaan</p>
@@ -89,18 +94,11 @@
           <div class="left">
             <p>Penggunaan pinjaman</p>
             <p class="sm_title">
-              <select name="" id="">
-                <option value="">Silahkan pilih</option>
-                <option value="">选择内容</option>
-                <option value="">选择内容1</option>
-                <option value="">选择内容2</option>
-                <option value="">选择内容3</option>
-              </select>
+              <button class="btn1">打开下拉2</button>
             </p>
           </div>
         </li>
-        <div>
-        </div>
+        <div class="select_box select_box2"></div>
       </ul>
       <button class="segera">Segera rentenir</button>
     </div>
@@ -108,11 +106,6 @@
   </div>
 
   <script>
-    $(".job_list").on("click", " li", function () {
-      var next = $(this).next();
-      next.slideToggle("slow");
-      $(".joblist_body").not(next).slideUp();
-    })
     var picker = new AjaxPicker({
       title: '配送至', //选择器标题
       tipText: ['省份', '城市', '区/县'],  //选择器提示语（可以一个也可以多个，对应每一栏的选择提示语）
@@ -195,6 +188,52 @@
         console.log(arr)
       }
     })
+    var hgS = new selectSwiper({
+        el: '.select_box2',
+        data: ['吃饭', '睡觉', '打豆豆','212121'],
+        init: function(index) {
+            if (index !== -1) {
+                $('.btn1').html(this.data[index]);
+            }
+        },
+        okFunUndefind: function() {
+            alert('必须选择一项');
+            return false;
+        },
+        okFun: function(index) {
+            console.log(index);
+            $('.btn1').html(this.data[index]);
+        },
+        closeFun: function() {
+            console.log('取消');
+        },
+    });
+    $('.btn1').on('click', function() {
+        hgS.openSelectSwiper();
+    });
+    var hgS1 = new selectSwiper({
+        el: '.select_box3',
+        data: ['吃饭', '睡觉', '打豆豆','123456'],
+        init: function(index) {
+            if (index !== -1) {
+                $('.btn2').html(this.data[index]);
+            }
+        },
+        okFunUndefind: function() {
+            alert('必须选择一项');
+            return false;
+        },
+        okFun: function(index) {
+            console.log(index);
+            $('.btn2').html(this.data[index]);
+        },
+        closeFun: function() {
+            console.log('取消');
+        },
+    });
+    $('.btn2').on('click', function() {
+        hgS1.openSelectSwiper();
+    });
   </script>
 
 </body>
