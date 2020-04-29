@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>出借人认证1</title>
+  <title>出借人认证2</title>
 </head>
 <link rel="stylesheet" href="./wap/css/init.css">
 <link rel="stylesheet" href="./wap/css/index.css">
@@ -26,8 +26,8 @@
   body {
     width: 100%;
     height: 100%;
-    background: #fff
-      /* background: linear-gradient(35deg, #82EEC8, #7258FF); */
+    background: #F5F6FA;
+    /* background: linear-gradient(35deg, #82EEC8, #7258FF); */
   }
 </style>
 
@@ -40,34 +40,19 @@
       </div>
     </div>
     <div style="height: 1.3rem;"></div>
-    <div class="job_bottom">
+    <p class="lender_title">Informasi Bank</p>
+    <div class="job_bottom lender_bottom">
       <ul class="job_list">
         <li>
           <div class="left">
-            <p>Nama</p>
-            <p class="sm_title"><input type="text" placeholder="Tolong masukkan"
-                oninput="if(value.length>60)value=value.slice(0,60)"></p>
-          </div>
-        </li>
-
-        <li>
-          <div class="left">
-            <p>KTP</p>
+            <p>Nama Pemilik Rekening</p>
             <p class="sm_title"><input type="text" placeholder="Tolong masukkan"
                 oninput="if(value.length>60)value=value.slice(0,60)"></p>
           </div>
         </li>
         <li>
           <div class="left">
-            <p>Tanggal Lahir</p>
-            <p class="sm_title"><input type="text" id="dateSelectortwo2" onfocus="this.blur()"
-                placeholder="Silahkan pilih"></p>
-          </div>
-          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
-        </li>
-        <li>
-          <div class="left">
-            <p>Jenis Kelamin</p>
+            <p>Nama Bank</p>
             <p class="sm_title">
               <button class="btn1">Silahkan pilih</button>
             </p>
@@ -77,58 +62,84 @@
         <div class="select_box select_box1"></div>
         <li>
           <div class="left">
-            <p>Email</p>
+            <p>Nomor Rekening Bank</p>
+            <p class="sm_title"><input type="numder" placeholder="Tolong masukkan"
+                oninput="if(value.length>60)value=value.slice(0,60)"></p>
+          </div>
+        </li>
+        <li style="border: none;">
+          <div class="left">
+            <p>Nomor Rekening Bank (Ulangi)</p>
+            <p class="sm_title"><input type="numder" placeholder="Tolong masukkan"
+                oninput="if(value.length>60)value=value.slice(0,60)"></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <p class="lender_title">Informasi Usaha</p>
+    <div class="job_bottom lender_bottom">
+      <ul class="job_list">
+        <li>
+          <div class="left">
+            <p>Nama Usaha </p>
+            <p class="sm_title"><input type="text" placeholder="Tolong masukkan"
+                oninput="if(value.length>60)value=value.slice(0,60)"></p>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <p>NPWP Usaha</p>
+            <p class="sm_title"><input type="number" placeholder="Silahkan pilih" oninput="if(value.length>60)value=value.slice(0,60)"></p>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <p>Telepon Usaha</p>
+            <p class="sm_title"><input type="number" placeholder="Silahkan pilih" oninput="if(value.length>60)value=value.slice(0,60)"></p>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <p>Email Usaha</p>
             <p class="sm_title"><input type="email" placeholder="Tolong masukkan" id="txtEmail"><span
                 id="spinfo"></span></p>
           </div>
         </li>
         <li>
           <div class="left">
-            <p>Kependudukan</p>
+            <p>Alamat rinci perusahaan</p>
+            <p class="sm_title"><input type="text" placeholder="Tolong masukkan"
+                oninput="if(value.length>60)value=value.slice(0,60)"></p>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <p>Alamat Lengkap</p>
             <p class="sm_title">
-              <button class="btn2">Silahkan pilih</button>
+              <button class="btn2">Silahkan Silahkan pilih</button>
             </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
         <div class="select_box select_box2"></div>
-
         <li>
           <div class="left">
-            <p>Pendidikan</p>
+            <p>Alamat Lengkap</p>
             <p class="sm_title">
-              <button class="btn3">Silahkan pilih</button>
+              <button class="btn3">Silahkan Silahkan pilih</button>
             </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
         <div class="select_box select_box3"></div>
-        <li>
-          <div class="left">
-            <p>Alamat</p>
-            <p class="sm_title">
-              <button class="btn4">Silahkan pilih</button>
-            </p>
-          </div>
-          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
-        </li>
-        <div class="select_box select_box4"></div>
-        <li>
-          <div class="left">
-            <p>Alamat Lengkap</p>
-            <p class="sm_title"><input type="text" placeholder="Tolong masukkan"
-                oninput="if(value.length>60)value=value.slice(0,60)"></p>
-          </div>
-        </li>
       </ul>
-      <button class="segera">LANJUTKAN</button>
+
     </div>
+    <div class="bianju"><button class="segera">LANJUTKAN</button></div>
   </div>
 </body>
 <script>
-  $(".repaymnet_bottomone").on('click,touchstart', function () {
-    $('.repayment_ko').toggle()
-  })
   var state = false;
   $("#txtEmail").focus(function () {
     if (state == false) {
@@ -151,6 +162,9 @@
         state = true;
       }
     }
+  })
+  $(".repaymnet_bottomone").on('click,touchstart', function () {
+    $('.repayment_ko').toggle()
   })
   var hgS1 = new selectSwiper({
     el: '.select_box1',
@@ -175,7 +189,6 @@
   $('.btn1').on('click', function () {
     hgS1.openSelectSwiper();
   });
-
   var hgS2 = new selectSwiper({
     el: '.select_box2',
     data: ['吃饭', '睡觉', '打豆豆', 'sdsd'],
@@ -220,43 +233,8 @@
     },
   });
   $('.btn3').on('click', function () {
-    hgS3.openSelectSwiper();
+    hgS2.openSelectSwiper();
   });
-  var hgS4 = new selectSwiper({
-    el: '.select_box4',
-    data: ['吃饭', '睡觉', '打豆豆', 'sdsd'],
-    init: function (index) {
-      if (index !== -1) {
-        $('.btn4').html(this.data[index]);
-      }
-    },
-    okFunUndefind: function () {
-      alert('必须选择一项');
-      return false;
-    },
-    okFun: function (index) {
-      console.log(index);
-      $('.btn4').html(this.data[index]);
-    },
-    closeFun: function () {
-      console.log('取消');
-    },
-  });
-  $('.btn4').on('click', function () {
-    hgS4.openSelectSwiper();
-  });
-  new Mdate("dateSelectortwo2");
-  new Mdate("dateShowBtn", {
-    acceptId: "dateSelectorTwo",
-    beginYear: "1998",
-    beginMonth: "10",
-    beginDay: "24",
-    endYear: "2020",
-    endMonth: "1",
-    endDay: "1",
-    format: "-"
-  });
-
 </script>
 
 </html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贷款详情</title>
+</head>
+<script src="./wap/js/jquery.min.js"></script>
+<script src="./wap/js/rem.js"></script>
+<link rel="stylesheet" href="./wap/css/init.css">
+<link rel="stylesheet" href="./wap/css/index.css">
+<style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        background: #F5F6FA;
+        /* background: linear-gradient(35deg, #82EEC8, #7258FF); */
+    }
+</style>
+
+<body>
+    <div class="repayment">
+        <div class="repayment_top1">
+            <div class="repayment_one">
+                <div class="loan_hl left"><img src="./wap/img/left.png" alt=""></div>
+                <div class="loan_htxt left"><span>Pinjaman dengan detail</span></div>
+            </div>
+        </div>
+        <div style="height: 1.3rem;"></div>
+        <p class="lender_title">Pinjaman detail</p>
+        <div class="job_bottom lender_bottom" style="background: #fff;margin-top: 0.2rem;padding-bottom: 0;">
+            <ul class="job_list">
+              <li>
+                <div class="left">
+                  <p>Nama perusahaan</p>
+                  <p class="sm_title"><input type="text" placeholder="Tolong masukkan" oninput="if(value.length>60)value=value.slice(0,60)"></p>
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <p>Alamat perusahaan</p>
+                  <p class="sm_title"><input type="text" placeholder="Silahkan pilih " id="address-input" disabled></p>
+                </div>
+                <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+              </li>
+              <div id="container"></div>
+              <li>
+                <div class="left">
+                  <p>Alamat rinci perusahaan</p>
+                  <p class="sm_title"><input type="text" placeholder="Tolong masukkan"  oninput="if(value.length>60)value=value.slice(0,60)"></p>
+                </div>
+              </li>
+              <div></div>
+              <li style="border: none;">
+                <div class="left">
+                  <p>Bidang usaha</p>
+                  <p class="sm_title">
+                    <button class="btn2">打开下拉2</button>
+                  </p>
+                </div>
+              </li>
+              <div class="select_box select_box3"></div>
+            </ul>
+         
+        </div>
+        <p class="lender_title">Informasi perbankan</p>
+        <div class="job_bottom lender_bottom" style="background: #fff;margin-top: 0.2rem;padding-bottom: 0;">
+            <ul class="job_list">
+              <li>
+                <div class="left">
+                  <p>Nama perusahaan</p>
+                  <p class="sm_title"><input type="text" placeholder="Tolong masukkan" oninput="if(value.length>60)value=value.slice(0,60)"></p>
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <p>Alamat perusahaan</p>
+                  <p class="sm_title"><input type="text" placeholder="Silahkan pilih " id="address-input" disabled></p>
+                </div>
+                <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+              </li>
+              <div id="container"></div>
+              <li>
+                <div class="left">
+                  <p>Alamat rinci perusahaan</p>
+                  <p class="sm_title"><input type="text" placeholder="Tolong masukkan"  oninput="if(value.length>60)value=value.slice(0,60)"></p>
+                </div>
+              </li>
+              <div></div>
+              <li style="border: none;">
+                    <div class="details_table_wrap">
+                        <div>
+                            <table border="1">
+                                <tr>
+                                  <th>Month</th>
+                                  <th>Savings</th>
+                                  <th>Month</th>
+                                  <th>Savings</th>
+                                  <th>Month</th>
+                                  <th>Savings</th>
+                                  <th>Month</th>
+                                  <th>Savings</th>
+                                  <th>Savings</th>
+                                  <th>Month</th>
+                                  <th>Savings</th>
+                                </tr>
+                                <tr>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                  <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                </tr>
+                                <tr>
+                                    <td>January</td>
+                                    <td>$100</td>
+                                    <td>January</td>
+                                    <td>$100</td>
+                                    <td>January</td>
+                                    <td>$100</td>
+                                    <td>January</td>
+                                    <td>$100</td>
+                                    <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                  </tr>
+                              </table>
+                        </div>
+                    </div>
+              </li>
+              <div class="select_box select_box3"></div>
+            </ul>
+         
+        </div>
+        <div class="bianju"><button class="segera">Segera rentenir</button></div>
+    </div>
+</body>
+<script>
+    $(".repaymnet_bottomone").on('click,touchstart', function () {
+        $('.repayment_ko').toggle()
+    })
+</script>
+
+</html>

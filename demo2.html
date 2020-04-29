@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./wap/js/jquery.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul,li{
+
+            list-style: none;
+        }
+        body{
+            background: #f6f6f6;
+        }
+        .active{
+            background: red;
+        }
+        #box li{
+            display: none;
+        }
+        #ul{
+            background: #fff;
+        }
+        #ul li{
+            float: left;
+            width:200px;
+        }
+        #ul li img{
+            width:60px;
+            padding:10px;
+        }
+        #ul:after{
+            content: "020";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul">
+        <li id="n1" class="active"><img src="image/n1_hover.png"></li>
+        <li id="n2"><img src="image/n2.png"></li>
+        <li id="n3"><img src="image/n3.png"></li>
+    </ul>
+    <ul id="box">
+        <li style="display: block">111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+    <script>
+        $(function(){
+            function tab(navItem,boxItem,navActiveClassName){
+                navItem.click(function(){
+                    $(this).addClass(navActiveClassName).siblings().removeClass(navActiveClassName);
+                    boxItem.eq($(this).index()).show().siblings().hide();
+                    var id=$(this).attr("id");//id命名需要和图片名称一样
+                    navItem.each(function(){
+                        var newId=$(this).attr("id");
+                        if(id==newId){
+                            $(this).find("img").attr("src","image/"+id+"_hover.png");//点亮的图片名称加_hover
+                        }else {
+                            $(this).find("img").attr("src","image/"+newId+".png");
+                        }
+                    })
+                })
+            }
+            tab($("#ul li"),$("#box li"),"active");
+        })
+    </script>
+</body>
+</html>

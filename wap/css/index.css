@@ -7,7 +7,7 @@
     color: #9A9A9A;
     font-size: 0.24rem;
 }
-.sm_title input[type="text"],.sm_title input[type="number"]{ height: 0.3rem;font-size: 0.26rem;width: 5rem;}
+.sm_title input[type="text"],.sm_title input[type="number"]{ font-size: 0.26rem;width: 5rem;}
 .sm_title input::-webkit-input-placeholder {
     color: #D2D2D2 !important;
     font-size: 0.26rem;
@@ -55,6 +55,8 @@ img{
 #dateSelectorOne{color: #9A9A9A;}
 #dateSelectortwo1{color: #9A9A9A;}
 #dateSelectortwo2{color: #9A9A9A;}
+.color4{color: #FF4747;}
+.bianju{padding: 0 0.4rem;margin-bottom: 0.5rem;}
 /* 模态框 */
 .alert-box {
 	display:table;
@@ -65,7 +67,7 @@ img{
 	bottom:0;
 	left:0;
 	right:0;
-	z-index:9999;
+	z-index:99;
 	background:rgba(0,0,0,0.5);
 }
 .alert {
@@ -246,11 +248,12 @@ img{
 .loanactive{ border-bottom: 0.08rem solid #fff; }
 .tab-item{display: none;}
 .loan_bottom{padding: 0.43rem 0.4rem;color: #131A22;}
+.loan_img{width: 0.3rem;height: 0.3rem;margin-top: 0.34rem;display: inline-block;}
 .item_one{background: #fff;border-radius: 0.05rem;padding:0.12rem;margin-bottom: 0.2rem;}
-.item_rp{color: #131A22;}
+.item_rp{color: #131A22;overflow: hidden;}
 .item_rp span:nth-child(1){font-size: 0.26rem;}
 .item_rp span:nth-child(2){font-size: 0.7rem;}
-.item_num{overflow: hidden;color: #9A9A9A;}
+.item_num{overflow: hidden;color: #9A9A9A;font-size: 0.24rem;}
 .item_radio{overflow: hidden;padding-left: 0.23rem;}
 .item_check li{width: 1.85rem;float: left;margin: 0.08rem;}
 .item_check li:nth-child(3n){margin:0.08rem 0;}
@@ -379,7 +382,7 @@ img{
 .my-wrap_head{background: #fff;padding: 0.4rem;}
 .my_title{font-size: 0.46rem;color: #131A22;font-weight: 400;}
 .my_img{width: 1.52rem;height: 1.47rem;margin: 0.36rem auto;background: red;border-radius: 50%;}
-.loading{position: absolute;top: 2rem;left: 45%; display: none;}
+.loading{position: absolute;top: 2rem;left: 45%; display: none;z-index: 1000;}
 .my_leave{color: #131A22;font-size: 0.34rem;text-align: center;font-weight: 600;margin: 0.2rem 0;}
 .my_leave span{font-size: 0.24rem;padding: 0.03rem 0.12rem;text-align: center;border: 0.01rem solid #7C69EF;color: #7C69EF;border-radius: 0.32rem;display: inline-block;}
 .my_num{font-size: 0.28rem;text-align: center;color: rgba(19, 26, 34, 0.3);}
@@ -390,12 +393,12 @@ img{
 /* bill */
 .bill_bottom{color: #FFFFFF;padding: 0 0 0.58rem 0.61rem;overflow: hidden;}
 .billb_one{width: 70%;}
-.bill_bottom .billsm{font-size: 0.26rem;}
+.billsm{font-size: 0.26rem;}
 .bill_bottom .billbig{font-size: 0.6rem;}
 .bill_bottom .bill_title{opacity: .5;font-size: 0.26rem;margin-top: 0.24rem;}
 .repayment{}
-.repayment_top{background: #fff;}
-.repayment_one{margin-bottom: 0.61rem;overflow: hidden;border-bottom: 0.03rem solid #F5F6FA;padding: 0.67rem 0 0.2rem 0.3rem;}
+.repayment_top,.repayment_top1{background: #fff;}
+.repayment_one{margin-bottom: 0.61rem;overflow: hidden;border-bottom: 0.03rem solid #F5F6FA;padding: 0.67rem 0 0.22rem 0.3rem;line-height: 0.41rem;}
 .repaymenttwo{color: #131A22;text-align: center;padding-bottom: 0.79rem;}
 .repayment_rp{padding-bottom: 0.2rem;}
 .repaymentsm{font-size: 0.4rem;}
@@ -409,8 +412,31 @@ img{
 .repaymnet_bottomone1{overflow: hidden;}
 .repayment_kode{width: 100%;text-align: center;color: #9a9a9a;font-size: 0.26rem;background: #F5F6FA;}
 
+/* 出借人认证1 */
+.repayment_top1{position:fixed;width: 100%;}
+.repayment_top1 .repayment_one{margin-bottom:0}
+.lender_title{color: #131A22;font-size: 0.28rem;padding: 0.25rem 0 0.2rem 0.4rem;font-weight: bold;}
+.lender_bottom{background: #fff;margin-top: 0.2rem;padding-bottom: 0;}
+.lender_bottom .job_list{margin-bottom: 0;}
+.lender_bottom .job_list li:last-child{border: rnone;}
+/* 贷款名单 */
+.loanlist_bottom{width: 100%;position: fixed;bottom: 0;overflow:hidden;background: #fff;}
+.loanlist_bottom dl{width: 33%;float: left;text-align: center;border-right: 0.01rem solid #C3C5CD;padding: 0.1rem 0 0.1rem 0;color: #C3C5CD;font-size: 0.22rem;font-weight: 400;}
+.loanlist_bottom dl:last-child{border: none;}
+.loanlist_bottom dl dt{width:0.37rem;height: 0.38rem;margin: 0.1rem auto;}
+.loan_list_wrap{display: none;}
+.loan_item{background: #fff;border-radius: 0.12rem;box-sizing: border-box;border-bottom: 0.08rem solid #59D5A3;padding: 0.4rem;color: #131A22;margin: 0.2rem 0.4rem;}
+.loanitemone{margin: 0.2rem 0; text-align: center;}
+.loanonebig{font-size: 0.7rem;}
+.loanitem_bottom{overflow: hidden;margin-top: 0.45rem;font-weight: 600;}
+.loan_itemcolor{border-color: #F7D580;}
+.loan_itemcolor1{border-color: #72ACFF;}
+.loan_list .tablistactive{display: block;}
+.loanshow{color: #7C69EF !important;}
+.daftar_txt{color: #9A9A9A; font-size: 0.24rem;overflow: hidden;padding-right: 0.3rem;}
+.daftar_txt span{display: inline-block;}
+.daftar_txt span:last-child{}
+.details_table_wrap{width: 100%;overflow-x: scroll;}
 
-
-
-
-
+#demo1{overflow: hidden;display: flex;z-index:10}
+#demo1 div{flex: 1;}

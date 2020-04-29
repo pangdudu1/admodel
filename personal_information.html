@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>个人信息</title>
-    <!-- <title>Data Pribadi </title> -->
+  <title>Data Pribadi</title>
+</head>
   <link rel="stylesheet" href="./wap/css/init.css">
   <link rel="stylesheet" href="./wap/css/index.css">
   <link rel="stylesheet" href="./wap/mdate/needcss/Mdate.css">
@@ -22,18 +22,12 @@
   <script src="./wap/swiper/dySeleect.js"></script>
   <script src="./wap/swiper/swiper.min.js"></script>
   <!-- <script src="./wap/swiper/index.js"></script> -->
-
   <style>
     html,
     body {
       background: #FFFFFF;
     }
   </style>
-</head>
-<style>
-
-</style>
-
 <body>
   <div class="loan_wrap">
     <div class="loan_header1">
@@ -43,7 +37,7 @@
           <div class="loan_htxt left"><span>Informasi perusahaan</span></div>
         </div>
         <div class="jobhead_step">
-          <span>04</span>
+          <span>03</span>
           <span class="jobhead_step_2">/06</span>
         </div>
       </div>
@@ -52,21 +46,18 @@
     <div style="height: 3.3rem;"></div>
     <div class="job_bottom">
       <ul class="job_list">
-
         <li>
           <div class="left">
             <p>Nama Keluarga Anda</p>
-            <p class="sm_title"><input type="text" placeholder="Sliakan isi"
-                oninput="if(value.length>40)value=value.slice(0,40)"></p>
+            <p class="sm_title"><input type="text" placeholder="Tolong masukkan"  oninput="if(value.length>40)value=value.slice(0,40)"></p>
           </div>
         </li>
-        <div></div>
 
         <li>
           <div class="left">
             <p>Agama</p>
             <p class="sm_title">
-              <button class="btn5">打开下拉2</button>
+              <button class="btn5">Silahkan pilih</button>
             </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
@@ -77,17 +68,17 @@
           <div class="left">
             <p>Jenis Kelamin</p>
             <p class="sm_title">
-              <button class="btn4">打开下拉2</button>
+              <button class="btn4">Silahkan pilih</button>
             </p>
           </div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
         <div class="select_box select_box4"></div>
         <li>
           <div class="left">
             <p>Tanggal Lahir</p>
             <p class="sm_title">
-              <input type="text" id="dateSelectorOne" placeholder="选择日期">
-              <!-- <input type="text" placeholder="Silahkan pilih" id="tanggal"></p> -->
+              <input type="text" id="dateSelectorOne" placeholder="Silahkan pilih " onfocus="this.blur()"></p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
@@ -96,15 +87,16 @@
         <li>
           <div class="left">
             <p>Lama tinggal</p>
-            <p class="sm_title"><input type="text" id="dateSelectortwo1" placeholder="选择日期"></p>
+            <p class="sm_title"><input type="text" id="dateSelectortwo1" onfocus="this.blur()" placeholder="Silahkan pilih "></p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
         <div class="joblist_body"></div>
+       
         <li>
           <div class="left">
             <p>Alamat Tempat Tinggal</p>
-            <p class="sm_title"><input type="text" placeholder="选择地址" id="address-input1"></p>
+            <p class="sm_title"><input type="text" onfocus="this.blur()" placeholder="Silahkan pilih " id="address-input1"></p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
@@ -113,15 +105,14 @@
           <div class="left">
             <p>Alamat Lengkap</p>
             <p class="sm_title">
-              <input type="text" placeholder="Sliakan isi" oninput="if(value.length>60)value=value.slice(0,60)">
+              <input type="text" placeholder="Tolong masukkan" oninput="if(value.length>60)value=value.slice(0,60)">
             </p>
           </div>
         </li>
-        <div></div>
         <li>
           <div class="left">
             <p>Tempat Lahir</p>
-            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" id="address-input2"></p>
+            <p class="sm_title"><input type="text" placeholder="Silahkan pilih" onfocus="this.blur()" id="address-input2"></p>
           </div>
         </li>
         <div id="container2"></div>
@@ -129,17 +120,17 @@
           <div class="left">
             <p>Tingkat Pendidikan</p>
             <p class="sm_title">
-              <button class="btn3">打开下拉2</button>
+              <button class="btn3">Silahkan pilih</button>
             </p>
           </div>
-          <div class="right xia"></div>
+          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
         <div class="select_box select_box3"></div>
         <li>
           <div class="left">
             <p>Status Perkawinan</p>
             <p class="sm_title">
-              <button class="btn2">打开下拉2</button>
+              <button class="btn2">Silahkan pilih</button>
             </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
@@ -149,17 +140,16 @@
           <div class="left">
             <p>Kapan Anda mulai bekerja</p>
             <p class="sm_title">
-              <input type="text" id="dateSelectortwo2" placeholder="选择日期">
+              <input type="text" id="dateSelectortwo2" onfocus="this.blur()" placeholder="Silahkan pilih">
             </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
         </li>
-        <div></div>
         <li>
           <div class="left">
             <p>Judul pekerjaan</p>
             <p class="sm_title">
-                <button class="btn1">打开下拉1</button>
+                <button class="btn1">Silahkan pilih</button>
             </p>
           </div>
           <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>

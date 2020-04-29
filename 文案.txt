@@ -1,4 +1,21 @@
 2 版本 压缩包名称为2.0
-home 页   新增loading   之后使用loading   增加：<div class="loading"><img src="./wap/img/5-121204193R5-50.gif" alt=""></div> 控制隐藏显示即可
-          按钮调用安卓方法
-loaninformation  滑动条事件
+页面：  首页         home         
+       借款信息     loaninformation   包含一次性付款款 分期付款
+       工作信息     job_information     √     Informasi perusahaan 02
+       个人信息     personal_information  √   Data Pribadi   03
+       紧急联系人   urgentpeople        √    04
+       账号信息     account_information    √  05 
+       绑定银行卡   bindbank    -    √   06
+       我的         my        √
+       账单详情     bill_details   √
+       还款         repayment         √
+       出借人认证   lender  √
+       出借人认证1   lender1  √
+       
+       贷款名单     loan_list
+       贷款详情     loan_details
+
+              禁止弹出键盘
+       <input type="text" onfocus="this.blur()" />
+       Tolong masukkan  请输入
+       Silahkan pilih    请选择
