@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Lihat Detail</title>
+    <title> Lihat Detail1</title>
 </head>
 <script src="./wap/js/jquery.min.js"></script>
 <script src="./wap/js/rem.js"></script>
@@ -34,7 +34,7 @@
             <ul class="job_list">
               <li>
                 <div class="left">
-                  <p>Transaksi No.</p>
+                  <p>Transaksi No.   </p>
                   <p class="sm_title">回显</p>
                 </div>
               </li>
@@ -112,10 +112,93 @@
               </li>
             </ul>
         </div>
+        <p class="lender_title">Informasi pembayaran</p>
+        <div class="job_bottom lender_bottom">
+            <ul class="job_list">
+              <li>
+                <div class="left">
+                  <p>Total Transfer(Rp) </p>
+                  <p class="sm_title">回显</p>
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <p>Bank</p>
+                  <p class="sm_title">回显</p>
+                </div>
+              </li>
+              <li>
+                <div class="left">
+                  <p>Pemilik</p>
+                  <p class="sm_title">回显</p>
+                </div>
+              </li>
+              <li style="border: none;">
+                <div class="left">
+                  <p>Virtual Account</p>
+                  <p class="sm_title">回显</p>
+                </div>
+              </li>
+            </ul>
+        </div>
+        <p class="lender_title">Jadwal Pembayaran</p>
+        <div class="job_bottom lender_bottom">
+            <ul class="job_list">
+              <li>
+                    <div class="details_table_wrap">
+                        <div>
+                            <table border="1" style="white-space: nowrap;">
+                                <tr>
+                                  <th>Bulan</th>
+                                  <th>0 Bulan </th>
+                                  <th>1 Bulan    </th>
+                                  <th>2 Bulan  </th>
+                                  <th>Month</th>
+                                  <th>Savings</th>
+                                  <th>Month</th>
+                                  <th>Savings</th>
+                                  <th>Savings</th>
+                                  <th>Month</th>
+                                  <th>Savings</th>
+                                </tr>
+                                <tr>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                  <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                </tr>
+                                <tr style="color4">
+                                    <td>January</td>
+                                    <td>$100</td>
+                                    <td>January</td>
+                                    <td>$100</td>
+                                    <td>January</td>
+                                    <td>$100</td>
+                                    <td>January</td>
+                                    <td>$100</td>
+                                    <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
+                                  </tr>
+                              </table>
+                        </div>
+                    </div>
+              </li>
+             
+            </ul>
+        </div>
+
         <p class="lender_title">Daftar Tagihan</p>
         <div class="job_bottom lender_bottom">
             <ul class="job_list">
-              <li style="border: none;">
+              <li>
                 <div class="left">
                   <p>Suku Bunga</p>
                   <p class="sm_title">回显</p>
@@ -127,7 +210,7 @@
                   <p class="sm_title">回显</p>
                 </div>
               </li>
-              <li style="border-bottom: none;">
+              <li > 
                     <div class="details_table_wrap">
                         <div>
                             <table border="1" style="white-space: nowrap;">
@@ -166,19 +249,26 @@
                                     <td>$100</td>
                                     <td>January</td>
                                     <td>$100</td>
-                                    <td >$100</td>
-                                    <td>January</td>
                                     <td>$100</td>
+                                  <td>January</td>
+                                  <td>$100</td>
                                   </tr>
                               </table>
                         </div>
                     </div>
               </li>
-            
+             
             </ul>
-         
         </div>
-        <div class="bianju"><button class="segera">Danai Sekarang</button></div>
+        <p class="lender_title">Jadwal Pembayaran</p>
+        <div class="bianju"><button class="segera">PERJANJIAN PEMBERI PINJAMAN dengan PENERIMA<br> PINJAMAN</button></div>
+        <div class="bianju"><button class="segera">PERJANJIAN LAYANAN PEMBERI PINJAMAN<br> DENGAN PLATFORM</button></div>
     </div>
 </body>
+<script>
+    $(".repaymnet_bottomone").on('click,touchstart', function () {
+        $('.repayment_ko').toggle()
+    })
+</script>
+
 </html>

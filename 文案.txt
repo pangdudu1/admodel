@@ -12,10 +12,44 @@
        出借人认证   lender  √
        出借人认证1   lender1  √
        
-       贷款名单     loan_list
-       贷款详情     loan_details
+       贷款名单     loan_list √
+       贷款详情     loan_details    √
+       贷款详情1     loan_details1  √
+       贷款确认    loan_confirmation √
+
+       拒绝页    reject
+       审核页    to_examine
+       账单      mybill
 
               禁止弹出键盘
        <input type="text" onfocus="this.blur()" />
        Tolong masukkan  请输入
        Silahkan pilih    请选择
+
+
+
+
+loading       html:
+              样式1全屏：
+                 <div id="tipDiv">
+			<center><img style="width:25px;" src="img/5-121204193R5-50.gif"></center>
+			<div id="tipInfo"></div>
+		     </div>
+              样式2
+              <div id="tipDiv1">
+			<center><img style="width:25px;" src="img/5-121204193R5-50.gif"></center>
+			<div id="tipInfo1"></div>
+		     </div>
+              js
+              function showTip(info) {
+                     $('#tipInfo').html(info);
+                     $('#tipDiv').show();
+              }
+              //加载结束关闭
+              function closeTip() {
+                     $('#tipDiv').hide();
+              }
+              //使用
+              showTip('内容内容');
+              隐藏：
+              closeTip()5-121204193R5-50

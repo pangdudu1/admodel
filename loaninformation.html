@@ -26,6 +26,14 @@
 </head>
 
 <body>
+    <div id="tipDiv">
+        <center><img style="width:40px;" src="./wap/img/loading.gif"></center>
+        <!-- <div id="tipInfo"></div> -->
+    </div>
+    <div id="tipDiv1">
+        <center><img style="width:40px;" src="./wap/img/loading.gif"></center>
+        <div id="tipInfo1"></div>
+    </div>
     <div class="loan_wrap">
         <div class="loan_header">
             <div class="loan_head_one">
@@ -139,7 +147,7 @@
                         <div class="item_num padd" style="display: none;">
                             <span class="left">Rp0.00</span><span class="right">Rp3000.00</span>
                         </div>
-                        <div class="slider-panel1"  style="display: none;">
+                        <div class="slider-panel1" style="display: none;">
                             <div class="slider-box1">
                                 <p class="slider-value1"></p>
                                 <input type="range" min="0" step="1" max="50" value="12" id="slider1">
@@ -399,6 +407,16 @@
     </script>
     <script type="text/javascript">
         $(function () {
+            function showTip(info) {
+                     $('#tipInfo1').html(info);
+                     $('#tipDiv1').show();
+              }
+              //加载结束关闭
+              function closeTip() {
+                     $('#tipDiv1').hide();
+              }
+            //   使用
+              showTip('内容内容');
             var hgS1 = new selectSwiper({
                 el: '.select_box1',
                 data: ['吃饭', '睡觉', '打豆豆', '212121'],
