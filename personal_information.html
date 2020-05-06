@@ -78,9 +78,9 @@
           <div class="left">
             <p>Tanggal Lahir</p>
             <p class="sm_title">
-              <input type="text" id="dateSelectorOne" placeholder="Silahkan pilih " onfocus="this.blur()"></p>
+              <input type="text" id="dateSelectorOne" placeholder="Silahkan pilih xxxx-xx-xx"></p>
           </div>
-          <div class="right xia"><img src="./wap/img/xia.png" alt=""></div>
+          <div class="right"><button type="button" id="dateShowBtn" class="btndata">Pilih tanggal</button></div>
         </li>
         <div class="joblist_body"></div>
 
@@ -453,17 +453,11 @@
     //   $(".joblist_body").not(next).slideUp();
     // })
 
-      new Mdate("dateSelectorOne");
+      // new Mdate("dateSelectorOne");
       new Mdate("dateSelectortwo1");
       new Mdate("dateSelectortwo2");
       new Mdate("dateShowBtn", {
-        acceptId: "dateSelectorTwo",
-        beginYear: "1998",
-        beginMonth: "10",
-        beginDay: "24",
-        endYear: "2020",
-        endMonth: "1",
-        endDay: "1",
+        acceptId: "dateSelectorOne",
         format: "-"
       });
 

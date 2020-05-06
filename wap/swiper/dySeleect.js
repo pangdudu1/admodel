@@ -34,13 +34,13 @@ function selectSwiper(obj) {
     _self.swiperData.init = obj.init;
     var hgSelect = `
         <div class="select">
-            <span class="close">取消</span>
-            <span class="ok">确定</span>
+            <span class="close">no</span>
+            <span class="ok">yes</span>
             <div class="selectData">
                 <div class="swiper-container">
                     <div class="cloth"></div>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">请选择</div>
+                        <div class="swiper-slide"></div>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@ function selectSwiper(obj) {
                 swiper.removeSlide(0);
                 var data = _self.swiperData.data;
                 var s = [];
-                s[0] = '<div class="swiper-slide">请选择</div>';
+                s[0] = '<div class="swiper-slide"></div>';
                 for (i = 0; i < data.length; i++) {
                     s[i + 1] = '<div class="swiper-slide">' + data[i] + '</div>';
                 }

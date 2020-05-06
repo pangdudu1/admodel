@@ -46,8 +46,7 @@
         <li>
           <div class="left">
             <p>Nama Pemilik Rekening</p>
-            <p class="sm_title"><input type="text" placeholder="Tolong masukkan"
-                oninput="if(value.length>60)value=value.slice(0,60)"></p>
+            <p class="sm_title">回显</p>
           </div>
         </li>
         <li>
@@ -63,15 +62,15 @@
         <li>
           <div class="left">
             <p>Nomor Rekening Bank</p>
-            <p class="sm_title"><input type="numder" placeholder="Tolong masukkan"
-                oninput="if(value.length>60)value=value.slice(0,60)"></p>
+            <p class="sm_title"><input type="numder" class="bank" placeholder="Tolong masukkan"
+                oninput="if(value.length>60)value=value.slice(0,60)" onkeyup="KeyUp()"></p>
           </div>
         </li>
         <li style="border: none;">
           <div class="left">
             <p>Nomor Rekening Bank (Ulangi)</p>
-            <p class="sm_title"><input type="numder" placeholder="Tolong masukkan"
-                oninput="if(value.length>60)value=value.slice(0,60)"></p>
+            <p class="sm_title"><input type="numder" class="bank1" placeholder="Tolong masukkan"
+                oninput="if(value.length>60)value=value.slice(0,60)" onkeyup="KeyUp()"></p>
           </div>
         </li>
       </ul>
@@ -140,6 +139,8 @@
   </div>
 </body>
 <script>
+  // $(".bank1")
+  
   var state = false;
   $("#txtEmail").focus(function () {
     if (state == false) {
@@ -235,6 +236,17 @@
   $('.btn3').on('click', function () {
     hgS2.openSelectSwiper();
   });
+  //验证两次一样
+  function KeyUp() {
+    var a = $('.bank').val();
+    var b = $('.bank1').val();
+    if(a == b){
+      $('.segera').removeAttr('disabled');
+    }else{
+      $('.segera').attr('disabled', 'disabled');
+      alert('1')
+    }
+  }
 </script>
 
 </html>

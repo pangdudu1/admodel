@@ -7,7 +7,7 @@
     color: #9A9A9A;
     font-size: 0.24rem;
 }
-.sm_title input[type="text"],.sm_title input[type="number"]{ font-size: 0.26rem;width: 5rem;}
+.sm_title input[type="text"],.sm_title input[type="number"]{ font-size: 0.26rem;width: 4.5rem;}
 .sm_title input::-webkit-input-placeholder {
     color: #D2D2D2 !important;
     font-size: 0.26rem;
@@ -38,6 +38,9 @@ img{
 .left{
     float: left;
 }
+.left button {
+    color: #9A9A9A !important;
+}
 .right{
     float: right;
 }
@@ -57,6 +60,15 @@ img{
 #dateSelectortwo2{color: #9A9A9A;}
 .color4{color: #FF4747;}
 .bianju{padding: 0 0.4rem;margin-bottom: 0.5rem;}
+.btndata{      background-color: #00c599;
+    color: #fff;
+    border: 0;
+    height: 100%;
+    margin-left: 0.08rem;
+    padding: 0.2rem 0.1rem;
+    border-radius: 0.11rem;
+    font-size: 0.24rem;
+    margin-top: 0.12rem;}
 /* 模态框 */
 .alert-box {
 	display:table;
